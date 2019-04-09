@@ -1,0 +1,3 @@
+[submodule "wiki.wiki"]
+	path = wiki.wiki
+	url = https://github.com/dexon-foundation/wiki.wiki.git
