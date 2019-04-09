@@ -141,30 +141,12 @@
                 <div id="content" class="content">
                     <main>
                         <a class="header" href="#getting-started" id="getting-started"><h1>Getting Started</h1></a>
-<a class="header" href="#introduction" id="introduction"><h1>Introduction</h1></a>
-<p>This documentation shows your way around <a href="https://dexon.org">DEXON</a>, the next generation blockchain platform.</p>
-<a class="header" href="#accessing-dexon-network" id="accessing-dexon-network"><h2>Accessing DEXON Network</h2></a>
-<p>To create a DEXON wallet and start using DEXON blockchain platform, follow <a href="Create-Wallet.html">wallet creation guide</a>.</p>
-<a class="header" href="#dapp-development" id="dapp-development"><h2>DApp Development</h2></a>
-<ul>
-<li>To learn abour DApp (decentralized apps) development and build DApps on DEXON, follow <a href="Dapp-Development.html">DApp development guide</a>.</li>
-<li>If you have already developed DApps on Ethereum and is planning to move your existing DApp onto DEXON, check out <a href="">DEXON DApp deployment guide</a>.</li>
-</ul>
-<a class="header" href="#node-operation" id="node-operation"><h2>Node Operation</h2></a>
-<ul>
-<li>To run a BP (block producing) full-node, follow <a href="DEXON-BP-Node-Operation-Guide.html">BP node operation guide</a>.</li>
-<li>To run a BP (block producing) full-node on testnet, follow <a href="DEXON-BP-Node-Operation-Guide.html">Testnet BP node operation guide</a></li>
-<li>If you simply need to communicate to DEXON network, like sending transactions or looking up network state, follow <a href="DEXON-RPC-Node-Operation-Guide.html">RPC node operation guide</a>.</li>
-</ul>
-<a class="header" href="#fullnode-development" id="fullnode-development"><h2>Fullnode Development</h2></a>
-<p>You can contribute to the development of DEXON itself! Get started with <a href="Fullnode-Development.html">DEXON fullnode development guide</a>.</p>
-<a class="header" href="#technical-documentations" id="technical-documentations"><h2>Technical Documentations</h2></a>
-<p>To learn more about how DEXON works, check out our <a href="Technical-Documentations.html">technical documenations</a></p>
+<a class="header" href="#overview" id="overview"><h1>Overview</h1></a>
 <a class="header" href="#how-to-use-this-documentation" id="how-to-use-this-documentation"><h1>How to use this documentation</h1></a>
 <a class="header" href="#network-access-guide" id="network-access-guide"><h1>Network Access Guide</h1></a>
 <a class="header" href="#create-wallet" id="create-wallet"><h1>Create Wallet</h1></a>
 <a class="header" href="#dapp-development-guide" id="dapp-development-guide"><h1>DApp Development Guide</h1></a>
-<a class="header" href="#dapp-development-1" id="dapp-development-1"><h1>DApp Development</h1></a>
+<a class="header" href="#dapp-development" id="dapp-development"><h1>DApp Development</h1></a>
 <p>Currently, DEXON uses Ethereum's virtual machine (EVM) as the default VM. So Dapp development on DEXON is exactly the same as on Ethereum. An exception is that if you want to use DEXON's <a href="https://github.com/dexon-foundation/wiki/wiki/On-Chain-Random-Oracle">on-chain random oracle</a>.</p>
 <p>DEXON's fork of solidity (called <a href="https://github.com/dexon-foundation/dsolidity">dsolidity</a>) supports a special built-in variable called <code>rand</code>. Here is an example of how to use it:</p>
 <pre><code>contract Rand {
@@ -279,7 +261,7 @@ rounds (2400 blocks).</p>
 <p>The document will contain essential instructions and knowledge for a node operator to successfully run a DEXON BP node.</p>
 <a class="header" href="#background" id="background"><h2>Background</h2></a>
 <p>For node operator to easily establish a DEXON BP node and continuously run the node for mining rewards, DEXON foundation provides the well-designed software supporting the mining mechanism on DEXON blockchain.</p>
-<a class="header" href="#overview" id="overview"><h2>Overview</h2></a>
+<a class="header" href="#overview-1" id="overview-1"><h2>Overview</h2></a>
 <p>The guide has 3 sections, providing the required knowledge for a node operator to: Set up node, run software, and collect mining rewards.</p>
 <a class="header" href="#environment-setup" id="environment-setup"><h2>Environment Setup</h2></a>
 <p>How to set up AWS/GCP server?</p>
@@ -500,7 +482,7 @@ Note that, each node can only unstake once until the unstake is withdrawn.</p>
 <li><a href="https://github.com/dexon-foundation/truffle">dexon-truffle</a>: DEXON fork of Truffle, a solidity contract development toolkit.</li>
 <li><a href="https://github.com/dexon-foundation/ganache-cli">dexon-ganache-cli</a>: DEXON for of Ganache, a mocking Ethereum blockchain implemented in JavaScript. Used for developing and testing smart contracts.</li>
 </ul>
-<a class="header" href="#technical-documentations-1" id="technical-documentations-1"><h1>Technical Documentations</h1></a>
+<a class="header" href="#technical-documentations" id="technical-documentations"><h1>Technical Documentations</h1></a>
 <a class="header" href="#consensus-algorithm-v2-specification" id="consensus-algorithm-v2-specification"><h1>Consensus Algorithm V2 Specification</h1></a>
 <a class="header" href="#selection-of-the-notary-set-size" id="selection-of-the-notary-set-size"><h1>Selection of the notary set size</h1></a>
 <p>As mention in our consensus algorithm, we follow the hypergeometric distribution to decide the size of notary set.</p>
@@ -2039,7 +2021,7 @@ Applicable law, regulation, and executive orders may require DEXON Foundation to
 <!-- [[ABI AUTOGEN END]] -->
 <!-- [[ABI AUTOGEN END]] -->
 <a class="header" href="#configuration-change" id="configuration-change"><h1>Configuration Change</h1></a>
-<a class="header" href="#overview-1" id="overview-1"><h2>Overview</h2></a>
+<a class="header" href="#overview-2" id="overview-2"><h2>Overview</h2></a>
 <p>The configuration for DEXON is round based configuration, which is allowed to be changed and applied in upcoming rounds on the fly without shutdowning/forking the system. Configurable parameters including:</p>
 <ul>
 <li>NumChains: the number of chains in blocklattice.</li>
@@ -2071,7 +2053,7 @@ Applicable law, regulation, and executive orders may require DEXON Foundation to
 </ul>
 <a class="header" href="#resource" id="resource"><h1>Resource</h1></a>
 <a class="header" href="#dexon-comparison-to-other-blockchain" id="dexon-comparison-to-other-blockchain"><h1>DEXON Comparison to Other Blockchain</h1></a>
-<a class="header" href="#introduction-1" id="introduction-1"><h3>Introduction</h3></a>
+<a class="header" href="#introduction" id="introduction"><h3>Introduction</h3></a>
 <p>This document explains how DEXON is different compared to other blockchain infrastructures. We do our best to explain the main differences, but still, we have the following principles:</p>
 <ol>
 <li>We will not dive into details of other projects. We only focus on the differences. For the details, please refer to their websites and whitepapers.</li>
