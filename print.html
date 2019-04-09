@@ -1,0 +1,2331 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="Getting-Started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="Overview.html"><strong aria-hidden="true">1.1.</strong> Overview</a></li><li><a href="how-to-use-this-documentation.html"><strong aria-hidden="true">1.2.</strong> How to use this documentation</a></li></ol></li><li><a href="Network-Access-Guide.html"><strong aria-hidden="true">2.</strong> Network Access Guide</a></li><li><ol class="section"><li><a href="Create-Wallet.html"><strong aria-hidden="true">2.1.</strong> Create Wallet</a></li></ol></li><li><a href="DApp-Dev-Guide.html"><strong aria-hidden="true">3.</strong> DApp Development Guide</a></li><li><ol class="section"><li><a href="Dapp-Development.html"><strong aria-hidden="true">3.1.</strong> DApp Development</a></li><li><a href="Access-to-Testnet.html"><strong aria-hidden="true">3.2.</strong> Access to Testnet</a></li></ol></li><li><a href="System-Spec.html"><strong aria-hidden="true">4.</strong> System Spec</a></li><li><ol class="section"><li><a href="accounts.html"><strong aria-hidden="true">4.1.</strong> Accounts</a></li><li><a href="transaction.html"><strong aria-hidden="true">4.2.</strong> Transaction</a></li><li><a href="block.html"><strong aria-hidden="true">4.3.</strong> Block</a></li></ol></li><li><a href="API.html"><strong aria-hidden="true">5.</strong> API</a></li><li><ol class="section"><li><a href="rpc-api.html"><strong aria-hidden="true">5.1.</strong> JSON-RPC API</a></li><li><a href="websocket-api.html"><strong aria-hidden="true">5.2.</strong> WebSocket API</a></li><li><a href="data-api.html"><strong aria-hidden="true">5.3.</strong> DATA API</a></li></ol></li><li><a href="Node-OP-Guide.html"><strong aria-hidden="true">6.</strong> Node Operator Guide</a></li><li><ol class="section"><li><a href="Running--a-BP-node-for-Testnet.html"><strong aria-hidden="true">6.1.</strong> Running a testnet BP node</a></li><li><a href="DEXON-BP-Node-Operation-Guide.html"><strong aria-hidden="true">6.2.</strong> Running a BP node</a></li><li><a href="DEXON-RPC-Node-Operation-Guide.html"><strong aria-hidden="true">6.3.</strong> Running a RPC node</a></li><li><a href="Rule-for-the-DEXON-node-set.html"><strong aria-hidden="true">6.4.</strong> Rule for the DEXON node set</a></li></ol></li><li><a href="Fullnode-Dev-Guide.html"><strong aria-hidden="true">7.</strong> Fullnode Development Guide</a></li><li><ol class="section"><li><a href="Fullnode-Development.html"><strong aria-hidden="true">7.1.</strong> Contribute to DEXON Fullnode</a></li><li><a href="List-of-Repositories.html"><strong aria-hidden="true">7.2.</strong> List of Repositories</a></li></ol></li><li><a href="Tech-Docs.html"><strong aria-hidden="true">8.</strong> Technical Documentations</a></li><li><ol class="section"><li><a href="Consensus-Algo-v2-Spec.html"><strong aria-hidden="true">8.1.</strong> Consensus Algorithm V2 Specification</a></li><li><a href="Selection-of-the-notary-set-size.html"><strong aria-hidden="true">8.2.</strong> Selection of notary set size</a></li><li><a href="DKG-TSIG-Protocol.html"><strong aria-hidden="true">8.3.</strong> DKG-Tsig Protocol</a></li><li><a href="On-Chain-Random-Oracle.html"><strong aria-hidden="true">8.4.</strong> On-chain Random Oracle</a></li><li><a href="DEXON-Cryptoeconomics.html"><strong aria-hidden="true">8.5.</strong> DEXON Cryptoeconomics</a></li><li><a href="Governance-Contract-Interface.html"><strong aria-hidden="true">8.6.</strong> Governance Contract Interface</a></li><li><a href="Configuration-Change.html"><strong aria-hidden="true">8.7.</strong> Configuration Change</a></li></ol></li><li><a href="Resource.html"><strong aria-hidden="true">9.</strong> Resource</a></li><li><ol class="section"><li><a href="Blockchain-Comparison.html"><strong aria-hidden="true">9.1.</strong> Blockchain Comparision</a></li><li><a href="DEXON-PAPERS.html"><strong aria-hidden="true">9.2.</strong> DEXON papers</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"></h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#getting-started" id="getting-started"><h1>Getting Started</h1></a>
+<a class="header" href="#introduction" id="introduction"><h1>Introduction</h1></a>
+<p>This documentation shows your way around <a href="https://dexon.org">DEXON</a>, the next generation blockchain platform.</p>
+<a class="header" href="#accessing-dexon-network" id="accessing-dexon-network"><h2>Accessing DEXON Network</h2></a>
+<p>To create a DEXON wallet and start using DEXON blockchain platform, follow <a href="Create-Wallet.html">wallet creation guide</a>.</p>
+<a class="header" href="#dapp-development" id="dapp-development"><h2>DApp Development</h2></a>
+<ul>
+<li>To learn abour DApp (decentralized apps) development and build DApps on DEXON, follow <a href="Dapp-Development.html">DApp development guide</a>.</li>
+<li>If you have already developed DApps on Ethereum and is planning to move your existing DApp onto DEXON, check out <a href="">DEXON DApp deployment guide</a>.</li>
+</ul>
+<a class="header" href="#node-operation" id="node-operation"><h2>Node Operation</h2></a>
+<ul>
+<li>To run a BP (block producing) full-node, follow <a href="DEXON-BP-Node-Operation-Guide.html">BP node operation guide</a>.</li>
+<li>To run a BP (block producing) full-node on testnet, follow <a href="DEXON-BP-Node-Operation-Guide.html">Testnet BP node operation guide</a></li>
+<li>If you simply need to communicate to DEXON network, like sending transactions or looking up network state, follow <a href="DEXON-RPC-Node-Operation-Guide.html">RPC node operation guide</a>.</li>
+</ul>
+<a class="header" href="#fullnode-development" id="fullnode-development"><h2>Fullnode Development</h2></a>
+<p>You can contribute to the development of DEXON itself! Get started with <a href="Fullnode-Development.html">DEXON fullnode development guide</a>.</p>
+<a class="header" href="#technical-documentations" id="technical-documentations"><h2>Technical Documentations</h2></a>
+<p>To learn more about how DEXON works, check out our <a href="Technical-Documentations.html">technical documenations</a></p>
+<a class="header" href="#how-to-use-this-documentation" id="how-to-use-this-documentation"><h1>How to use this documentation</h1></a>
+<a class="header" href="#network-access-guide" id="network-access-guide"><h1>Network Access Guide</h1></a>
+<a class="header" href="#create-wallet" id="create-wallet"><h1>Create Wallet</h1></a>
+<a class="header" href="#dapp-development-guide" id="dapp-development-guide"><h1>DApp Development Guide</h1></a>
+<a class="header" href="#dapp-development-1" id="dapp-development-1"><h1>DApp Development</h1></a>
+<p>Currently, DEXON uses Ethereum's virtual machine (EVM) as the default VM. So Dapp development on DEXON is exactly the same as on Ethereum. An exception is that if you want to use DEXON's <a href="https://github.com/dexon-foundation/wiki/wiki/On-Chain-Random-Oracle">on-chain random oracle</a>.</p>
+<p>DEXON's fork of solidity (called <a href="https://github.com/dexon-foundation/dsolidity">dsolidity</a>) supports a special built-in variable called <code>rand</code>. Here is an example of how to use it:</p>
+<pre><code>contract Rand {
+    uint256 value;
+
+    function update() public {
+        value = rand;
+    }
+
+    function get() view public returns (uint256) {
+        return value;
+    }
+}
+</code></pre>
+<p>This very simple contract demonstrates how to use the <code>rand</code> variable. When <code>update()</code> is called, the state <code>value</code> is assigned to a random value generated by DEXON's on-chain random oracle.</p>
+<p>The most simple way to develop Dapps on DEXON is to use the DEXON version of the Remix IDE: https://remix.dexon.org. You should use this with the DekuSan Web Wallet(<a href="https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj">Chrome</a>/<a href="https://addons.mozilla.org/en-US/firefox/addon/dekusan">Firefox</a>). To get free testnet token, please check the <a href="https://dexon.org/faucet">faucet</a>.</p>
+<p>If you are developing apps with truffle, you will need to use <a href="https://github.com/dexon-foundation/dsolidity">dsolidity</a>. The nodejs version can also be found <a href="https://github.com/dexon-foundation/dsolc-js">here</a>.</p>
+<a class="header" href="#truffle" id="truffle"><h3>Truffle</h3></a>
+<p><a href="https://github.com/trufflesuite/truffle">Truffle</a> is a set of tools for developing solidity apps, originally developed by ConsenSys.<br />
+The <a href="https://github.com/dexon-foundation/truffle">DEXON-port of Truffle</a> uses dsolidity, which supports on-chain unbiased randomness.</p>
+<p>Get the DEXON-port of truffle suite from <code>npm install -g @dexon-foundation/truffle</code><br />
+You can check out our demo DApp <a href="https://github.com/dexon-foundation/hello-dexon">hello-dexon</a> and learn how to compile, test and deploy your smart contracts.</p>
+<ol>
+<li><code>mkdir hello-dexon &amp;&amp; cd hello-dexon</code></li>
+<li><code>dexon-truffle unbox dexon-foundation/hello-dexon</code></li>
+<li>Use <code>dexon-truffle compile</code> to compile the final byte-code</li>
+<li>Deploy onto the DEXON network by <code>dexon-truffle migrate --network=testnet</code></li>
+</ol>
+<a class="header" href="#ganache" id="ganache"><h3>Ganache</h3></a>
+<p><a href="https://github.com/trufflesuite/ganache">Ganache</a> is a JavaScript mock of Ethereum blockchain, for developing and testing smart contracts and other blockchain operations.<br />
+The <a href="https://github.com/dexon-foundation/ganache-cli">DEXON version of Ganache</a> adds additional op-codes that DEXON blocklattice introduced.</p>
+<pre><code>&gt; npm i -g @dexon-foundation/ganache-cli
+&gt; dexon-ganache
+</code></pre>
+<a class="header" href="#access-to-testnet" id="access-to-testnet"><h1>Access to Testnet</h1></a>
+<p>There are a few options on how to access the current testnet. The first is to use the public DEXON RPC endpoint,  the second one is to sync the fullnode locally.</p>
+<a class="header" href="#public-rpc-endpoint" id="public-rpc-endpoint"><h2>Public RPC Endpoint</h2></a>
+<p>The public testnet endpoints is available at:</p>
+<pre><code>Testnet:
+    http: https://testnet-rpc.dexon.org
+    websocket: wss://testnet-rpc.dexon.org/ws
+
+Taipei testnet:
+    http: https://taipei-rpc.dexon.org
+    websocket: wss://taipei-rpc.dexon.org/ws
+</code></pre>
+<p>Just point your DEXON/Ethereum client to this endpoint, and you should be able to send transactions and query account info.</p>
+<a class="header" href="#syncing-fullnode" id="syncing-fullnode"><h2>Syncing Fullnode</h2></a>
+<p>The testnet could be synchronized with the following command:</p>
+<pre><code>gdex --testnet
+</code></pre>
+<p>If you don't know how to build the <code>gdex</code> binary, please follow the wiki page <a href="https://github.com/dexon-foundation/wiki/wiki/Building-DEXON">here</a>.</p>
+<p>It may take a few hours before your fullnode is fully-synchronised.  When it does, you can now point your DEXON/Ethereum client to http://localhost:8545</p>
+<p>Note: DEXON's current testnet is still unstable, it might be reset at some point. If it does, you might have to remove the data directory (<code>$HOME/.dexon</code> on Linux, and <code>$HOME/Library/Dexon</code> on MacOS) and re-sync the node.</p>
+<a class="header" href="#system-spec" id="system-spec"><h1>System Spec</h1></a>
+<a class="header" href="#accounts" id="accounts"><h1>Accounts</h1></a>
+<a class="header" href="#transaction" id="transaction"><h1>Transaction</h1></a>
+<a class="header" href="#block" id="block"><h1>Block</h1></a>
+<a class="header" href="#api" id="api"><h1>API</h1></a>
+<a class="header" href="#json-rpc-api" id="json-rpc-api"><h1>JSON-RPC API</h1></a>
+<a class="header" href="#websocket-api" id="websocket-api"><h1>WebSocket API</h1></a>
+<a class="header" href="#data-api" id="data-api"><h1>DATA API</h1></a>
+<a class="header" href="#node-operator-guide" id="node-operator-guide"><h1>Node Operator Guide</h1></a>
+<a class="header" href="#run-dexon" id="run-dexon"><h1>Run DEXON</h1></a>
+<p>Instructions to run a DEXON block proposer node.</p>
+<a class="header" href="#generate-node-key" id="generate-node-key"><h2>Generate Node Key</h2></a>
+<p>A node key is required to operate a BP node. Run the following command to
+generate a node key:</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon-tools nodekey generate /mnt/node.key
+</code></pre>
+<p>This show output content similar to the following</p>
+<pre><code>Node Address: 0x93aA8C9C77De627E665F0b4015B7271B9Be89E83
+Public Key: 0x046272a157cbffa00677be00b08c9d47f295539b07e53360754579ad5e933a638ba58dcf850484e7d40b8bc163a920082b2500ee54968db7155c6231c7e4eed592
+</code></pre>
+<p>A file <code>node.key</code> can be found under current working directory. <code>node.key</code> is
+very important as it contains the node private key. Please save this file
+securely.</p>
+<a class="header" href="#register-your-node" id="register-your-node"><h2>Register your node</h2></a>
+<ol>
+<li>Send some DXN to your node key address, 100 DXN should suffice. These DXN are required for the node to send transaction and interact with the consensus protocol. You need to replenish them if it ran out.</li>
+<li>Goto the <a href="https://testnet.dexscan.org/address/0x63751838D6485578B23e8b051d40861eCC416794">Governance contract page on DEXSCAN</a>.</li>
+<li>Navigate to the <code>Write</code> tab and select <code>register</code> from the dropdown menu.</li>
+<li>Fill in the information like below, currently, you need 1M DXN to run a BP node. If you don't have enough testnet DXN, ask @wnhuang (telegram) for it.</li>
+</ol>
+<p><img src="https://i.imgur.com/bc2vDgA.png" alt="Register in Governance Contract Page" /></p>
+<ol start="5">
+<li>Hit send to register your node.</li>
+</ol>
+<p>After this, your node should be staked.</p>
+<p>Note that after staked, the configuration will start to take effect after 2
+rounds (2400 blocks).</p>
+<a class="header" href="#start-the-bp-node" id="start-the-bp-node"><h2>Start the BP node</h2></a>
+<p>Use the following command to start the BP node:</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon:testnet \
+    --testnet \
+    --bp \
+    --nodekey=/mnt/node.key \
+    --datadir=/mnt/datadir \
+    --syncmode=fast \
+    --cache=1024 \
+    --gcmode=archive
+</code></pre>
+<p>Please make sure you have enough disk space in the current working directory.</p>
+<a class="header" href="#content" id="content"><h2>Content</h2></a>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#system-requirement">System Requirement</a></li>
+<li><a href="#software-instruction">Software Instruction</a></li>
+<li><a href="#mining-mechanism">Mining Mechanism</a></li>
+</ul>
+<a class="header" href="#objective" id="objective"><h2>Objective</h2></a>
+<p>The document will contain essential instructions and knowledge for a node operator to successfully run a DEXON BP node.</p>
+<a class="header" href="#background" id="background"><h2>Background</h2></a>
+<p>For node operator to easily establish a DEXON BP node and continuously run the node for mining rewards, DEXON foundation provides the well-designed software supporting the mining mechanism on DEXON blockchain.</p>
+<a class="header" href="#overview" id="overview"><h2>Overview</h2></a>
+<p>The guide has 3 sections, providing the required knowledge for a node operator to: Set up node, run software, and collect mining rewards.</p>
+<a class="header" href="#environment-setup" id="environment-setup"><h2>Environment Setup</h2></a>
+<p>How to set up AWS/GCP server?</p>
+<p>For AWS, please follow https://docs.aws.amazon.com/quickstarts/latest/vmlaunch/welcome.html</p>
+<p>For GCP, please follow https://cloud.google.com/compute/docs/quickstart-linux</p>
+<a class="header" href="#system-requirement" id="system-requirement"><h3>System Requirement</h3></a>
+<p>Running DEXON BP node has the following requirement:</p>
+<a class="header" href="#hardware-requirement" id="hardware-requirement"><h3>Hardware Requirement</h3></a>
+<table><thead><tr><th> Tier </th><th> CPU </th><th> Memory </th><th> Bandwidth </th><th> Estimated Cost </th></tr></thead><tbody>
+<tr><td> Minimum  </td><td> 4 Cores 2.0+ GHz </td><td> 8 GB </td><td> 200Mbps </td><td> 200~400 USD/mth </td></tr>
+<tr><td> Recommend</td><td> 8 Cores 2.0+ GHz </td><td> 16 GB</td><td> 200Mbps </td><td> 600~800 USD/mth </td></tr>
+</tbody></table>
+<a class="header" href="#software-requirement" id="software-requirement"><h3>Software requirement</h3></a>
+<ul>
+<li>OS: Linux 64 bit.</li>
+<li>Docker image: dexonfoundation/dexon</li>
+<li>Docker</li>
+<li>Go compiler</li>
+<li>C++ compiler</li>
+<li>Library: gmp, openssl, pkg-config</li>
+</ul>
+<p>Follow the appropriate link below to find installation instructions for your platform.</p>
+<ul>
+<li><a href="https://github.com/dexon-foundation/wiki/wiki/Installation-Instructions-for-Mac">Installation Instructions for Mac</a></li>
+<li><a href="https://github.com/dexon-foundation/wiki/wiki/Installation-Instructions-for-Ubuntu">Installation Instructions for Ubuntu</a></li>
+</ul>
+<a class="header" href="#software-instruction" id="software-instruction"><h2>Software Instruction</h2></a>
+<a class="header" href="#download-dexon-fullnode-implementation" id="download-dexon-fullnode-implementation"><h3>Download DEXON fullnode implementation</h3></a>
+<pre><code>git clone git@github.com:dexon-foundation/dexon.git
+</code></pre>
+<p>go into the dictionary</p>
+<pre><code>cd dexon
+</code></pre>
+<a class="header" href="#generate-node-key-1" id="generate-node-key-1"><h3>Generate Node Key</h3></a>
+<p>A node key is required to operate a BP node. Run the following command to generate a node key:</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon-tools \
+    nodekey generate /mnt/node.key
+</code></pre>
+<p>This show output content similar to the following</p>
+<pre><code>Node Address: 0x93aA8C9C77De627E665F0b4015B7271B9Be89E83
+Public Key:0x046272a157cbffa00677be00b08c9d47f295539b07e53360754579ad5e933a638ba58dcf850484e7d40b8bc163a920082b2500ee54968db7155c6231c7e4eed592
+</code></pre>
+<p>Please store the address and public key which will be used to register a fullnode.
+A file node.key can be found under the current working directory. node.key is very important as it contains the node private key. Please save this file securely.</p>
+<a class="header" href="#register-your-node-1" id="register-your-node-1"><h3>Register your node</h3></a>
+<ol>
+<li>Sync DEXON blockchain. Use the following command to download all the blocks in DEXON blockchain.</li>
+</ol>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon \
+        --bp \
+        --nodekey=/mnt/node.key \
+        --datadir=/mnt/datadir \
+        --syncmode=fast\
+        --cache=1024 \
+        --gcmode=archive
+</code></pre>
+<p>When you see <code>commit pivot</code>, press <code>control + c</code>.</p>
+<ol start="2">
+<li>
+<p>Send some DXN to your node key address, 100 DXN should suffice. These DXN are required for the node to send transaction and interact with the consensus protocol. You need to replenish them if it ran out.</p>
+</li>
+<li>
+<p>Goto the <a href="https://testnet.dexscan.app/address/0x63751838D6485578B23e8b051d40861eCC416794">Governance contract page on DEXONSCAN</a>.</p>
+</li>
+<li>
+<p>Navigate to the <code>Write</code> tab and select <code>register</code> from the dropdown menu.</p>
+</li>
+<li>
+<p>Fill in the information like below; currently, you need 1M DXN to run a BP node. If you don't have enough testnet DXN, ask @wnhuang (telegram) for it.</p>
+</li>
+</ol>
+<ul>
+<li>Node Public Key (the public key generated above and should not duplicate)</li>
+<li>Name of the node (maximum length: 32 bytes)</li>
+<li>Contact email (maximum length: 32 bytes)</li>
+<li>Node Location (maximum length: 32 bytes)</li>
+<li>Website URL (maximum length: 128 bytes)</li>
+</ul>
+<p><img src="https://i.imgur.com/bc2vDgA.png" alt="Register in Governance Contract Page" />
+The user whose stake is locked (bought DXN coin in private-sale), please contact DEXON Foundation and provide the information below.</p>
+<ol start="6">
+<li>Hit send to register your node.</li>
+</ol>
+<p>After this, you are successfully staked and the configuration will start to take effect after 2 epochs (2400 blocks).</p>
+<p>Note that, the account of node.key and the account to send DXN coin to governance contract are not necessary to be the same. We strongly suggest using different keys to manage the risk.</p>
+<p>Then, you can start a BP node</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon \
+    --bp \
+    --nodekey=/mnt/node.key \
+    --datadir=/mnt/datadir \
+    --syncmode=full \
+    --cache=1024 \
+    --gcmode=archive
+</code></pre>
+<p>, or, you can run through container as explaining in the next section.
+For more detail instruction about <code>gdex</code>, go to https://github.com/dexon-foundation/dexon or use</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon --help
+</code></pre>
+<a class="header" href="#start-the-bp-node-1" id="start-the-bp-node-1"><h3>Start the BP node</h3></a>
+<p>Use the following command to start the BP node:</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon \
+    --bp \
+    --nodekey=/mnt/node.key \
+    --datadir=/mnt/datadir \
+    --syncmode=full \
+    --cache=1024 \
+    --gcmode=archive
+</code></pre>
+<p>Please make sure you have enough disk space in the current working directory</p>
+<a class="header" href="#mining-mechanism" id="mining-mechanism"><h2>Mining Mechanism</h2></a>
+<a class="header" href="#a-hrefhttpsgithubcomdexon-foundationwikiwikidexon-cryptoeconomicsdexon-mining-economy-and-mining-rewardsa" id="a-hrefhttpsgithubcomdexon-foundationwikiwikidexon-cryptoeconomicsdexon-mining-economy-and-mining-rewardsa"><h3><a href="https://github.com/dexon-foundation/wiki/wiki/DEXON-Cryptoeconomics">DEXON Mining Economy and Mining Rewards</a></h3></a>
+<p>Please read this document, https://github.com/dexon-foundation/wiki/wiki/DEXON-Cryptoeconomics</p>
+<p>As an example, initially, each node can expectedly mine 1M * 18.75% = 187.5K DXN coin per year (before total minted tokens hit 1.5B DXN).</p>
+<a class="header" href="#running-a-rpc-node" id="running-a-rpc-node"><h1>Running a RPC node</h1></a>
+<a class="header" href="#rule-for-the-dexon-node-set" id="rule-for-the-dexon-node-set"><h1>Rule for the DEXON node set</h1></a>
+<p>We introduce the rule for node set and give a brief explanation to the functions in DEXON <a href="https://testnet.dexscan.org/address/0x63751838D6485578B23e8b051d40861eCC416794">governance contract</a>.</p>
+<a class="header" href="#active-condition-permission-to-be-in-notary-set" id="active-condition-permission-to-be-in-notary-set"><h2>Active condition (permission to be in notary set)</h2></a>
+<p>You must deposit enough stake in the governance contract to get the qualification to be selected in the notary set.
+Sometimes nodes who violate the rule for notary set will be fined some coin. This leads nodes unqualified to be selected in the notary set. Nodes can be re-qualify if paying the fined such that</p>
+<pre><code>stake - fine &gt;= 1M DXN
+</code></pre>
+<a class="header" href="#reward" id="reward"><h2>Reward</h2></a>
+<p>The reward of each block is calculated as</p>
+<pre><code>block_Reward = mining_Velocity * total_Staked * round_Interval / (365*24*60*60)
+</code></pre>
+<p>For example, 100 nodes with each staked 1M DXN and mining velocity is 18.75%, the reward of each block is</p>
+<pre><code>  100 * 1M * 18.75% * 1 / (365*24*60*60) = 0.5945586 DXN
+</code></pre>
+<p>You can find the parameter information via <a href="https://testnet.dexscan.app/governance">governance statistic</a> page.</p>
+<p>From the description above, the expected reward for each node in 1 day is</p>
+<pre><code> 100 * 1M * 18.75% * 1 / 365 /100 = 513.7 DXN
+</code></pre>
+<a class="header" href="#penalty" id="penalty"><h2>Penalty</h2></a>
+<p>Nodes shall not engage in any of the following conducts:</p>
+<ol>
+<li>Forking or trying to fork blocks at the same height by proposing multiple blocks</li>
+<li>Forking or trying to fork votes by submitting multiple votes in the same iteration in the Byzantine Agreement (BA)</li>
+<li>Engaging in malicious behaviors in Distributed Key Generation, including without limitation sending wrong secret shares to other nodes, and such behaviors have been complained by other nodes</li>
+<li>Producing wrong Share-Sig by sending wrong share signature to common reference string (CRS) or in commit-vote</li>
+<li>Failing to finish distributed key generation (DKG)</li>
+<li>Failing to propose any blocks during a whole epoch</li>
+</ol>
+<p>For 1. to 4., the entire stake will be confiscated immediately by DEXON Foundation. For 5., a fine of the <code>1 dei</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.  For 6., a fine of the <code>Block Reward*86400/total Node</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.</p>
+<a class="header" href="#contract-write-function" id="contract-write-function"><h2>Contract Write function</h2></a>
+<p>In this section, we briefly introduce some functions that DEXON governance provides to write in.</p>
+<a class="header" href="#register" id="register"><h3>Register</h3></a>
+<ol>
+<li>In DekuSan wallet, switch to the <code>owner's account</code>.</li>
+<li>Navigate to the <code>Write</code> tab of the governance contract and select <code>register</code> from the dropdown menu.</li>
+<li>Fill in the information like below; currently, you need 1M DXN to run a BP node.</li>
+</ol>
+<ul>
+<li>Node Public Key (you must hold the corresponding secret key)</li>
+<li>Name of the node</li>
+<li>Contact email</li>
+<li>Node Location</li>
+<li>Website URL</li>
+</ul>
+<ol start="4">
+<li>Click <code>Send</code> and <code>confirm</code> in DekuSan wallet.</li>
+</ol>
+<a class="header" href="#stakeunstake" id="stakeunstake"><h3>Stake/Unstake</h3></a>
+<p>After registering, each node owner can continue depositing more stake into DEXON governance contract.  This is super easy to achieve in DEXON governance contract.</p>
+<ol>
+<li>Switch to the <code>owner account</code> in DekuSan wallet.</li>
+<li>Navigate to the <code>Write</code> tab and select <code>stake</code> from the dropdown menu.</li>
+<li>Fill the amount of stake in the contract.</li>
+<li>Click <code>Send</code> and <code>confirm</code> in DekuSan wallet.</li>
+</ol>
+<p>On the other hand, each node owner can also unstake from DEXON governance contract. This is almost identical to operating stake function.</p>
+<ol>
+<li>Switch to the <code>owner account</code> in DekuSan wallet.</li>
+<li>Navigate to the <code>Write</code> tab and select <code>unstake</code> from the dropdown menu.</li>
+<li>Fill the amount of unstake in the contract.</li>
+<li>Click <code>Send</code> and <code>confirm</code> in DekuSan wallet.</li>
+</ol>
+<p>To ensure the stability of DEXON blockchain, the duration to withdraw the unstake coin is set 24 epochs, which corresponds around 1 day in real-world time. In the duration, the node can still propose block and earn the reward, but the node sill can be fined if violating any rule.
+Note that, each node can only unstake once until the unstake is withdrawn.</p>
+<a class="header" href="#withdraw" id="withdraw"><h3>Withdraw</h3></a>
+<p>After unstaking and wait for 24 epochs, the node can withdraw the stake.</p>
+<ol>
+<li>Switch to the <code>owner account</code> in DekuSan wallet.</li>
+<li>Navigate to the <code>Write</code> tab and select <code>withdraw</code> from the dropdown menu.</li>
+<li>Click <code>Send</code> and <code>confirm</code> in DekuSan wallet.</li>
+</ol>
+<a class="header" href="#transfer-node-owner" id="transfer-node-owner"><h3>Transfer Node Owner</h3></a>
+<p>A node owner can also transfer the owner right to others.</p>
+<ol>
+<li>Switch to the <code>owner account</code> in DekuSan wallet.</li>
+<li>Navigate to the <code>Write</code> tab and select <code>register</code> from the dropdown menu.</li>
+<li>Fill the <code>address</code> of the new owner.</li>
+<li>Click <code>Send</code> and <code>confirm</code> in DekuSan wallet.</li>
+</ol>
+<blockquote>
+<p>WARNING: This is an IRREDUCIBLE operation. No one can recover if you transfer to a wrong address. Please double-check the address is correct.</p>
+</blockquote>
+<a class="header" href="#contract-read-function" id="contract-read-function"><h2>Contract Read function</h2></a>
+<!-- Most of the information can be found in DEXONSCAN website. To prevent in case, we introduce a method to read the status of DEXON blockchain. -->
+<p>The latest system parameters can be found in the governance contract. We introduce some fruquently used functions.</p>
+<a class="header" href="#nodes" id="nodes"><h3>nodes</h3></a>
+<p><code>nodes</code> returns the status of a node, where the input is the order of the node. The order of a node can be query by the function <code>nodesOffsetByAddress</code>.</p>
+<a class="header" href="#nodelength" id="nodelength"><h3>nodeLength</h3></a>
+<p><code>nodeLength</code> returns the current size of the node set.</p>
+<a class="header" href="#nodesoffsetbyaddress" id="nodesoffsetbyaddress"><h3>nodesOffsetByAddress</h3></a>
+<p><code>nodesOffsetByAddress</code> returns the order of a node, where the input is the address of the node.</p>
+<a class="header" href="#fullnode-development-guide" id="fullnode-development-guide"><h1>Fullnode Development Guide</h1></a>
+<a class="header" href="#contribute-to-dexon-fullnode" id="contribute-to-dexon-fullnode"><h1>Contribute to DEXON Fullnode</h1></a>
+<a class="header" href="#list-of-repositories" id="list-of-repositories"><h1>List of Repositories</h1></a>
+<ul>
+<li><a href="https://github.com/dexon-foundation/dexon-consensus">dexon-consensus</a>: the consensus SDK and simulation.</li>
+<li><a href="https://github.com/dexon-foundation/dexon">dexon</a>: the DEXON fullnode implementation, based on go-ethereum.</li>
+<li><a href="https://github.com/dexon-foundation/governance-abi">governance-abi</a>: the DEXON governance contract interface solidity implementation for generating ABI.</li>
+<li><a href="https://github.com/dexon-foundation/dekusan">dekusan</a>: Chrome wallet extension based on MetaMask.</li>
+<li><a href="https://github.com/dexon-foundation/dsolidity">dsolidity</a>: DEXON fork of the solidity compiler, includes extra features supported by DEXON's modification of EVM.</li>
+<li><a href="https://github.com/dexon-foundation/DIPs">DIPs</a>: a place for DEXON Improvement Proposals</li>
+<li><a href="https://github.com/dexon-foundation/hello-dexon">hello-dexon</a>: a simple DEXON smart contract, demonstrating the on-chain unbiased random oracle</li>
+<li><a href="https://github.com/dexon-foundation/remix-ide">dexon-remix-ide</a>: DEXON fork of Remix, a solidity IDE that runs on any modern browsers</li>
+<li><a href="https://github.com/dexon-foundation/truffle">dexon-truffle</a>: DEXON fork of Truffle, a solidity contract development toolkit.</li>
+<li><a href="https://github.com/dexon-foundation/ganache-cli">dexon-ganache-cli</a>: DEXON for of Ganache, a mocking Ethereum blockchain implemented in JavaScript. Used for developing and testing smart contracts.</li>
+</ul>
+<a class="header" href="#technical-documentations-1" id="technical-documentations-1"><h1>Technical Documentations</h1></a>
+<a class="header" href="#consensus-algorithm-v2-specification" id="consensus-algorithm-v2-specification"><h1>Consensus Algorithm V2 Specification</h1></a>
+<a class="header" href="#selection-of-the-notary-set-size" id="selection-of-the-notary-set-size"><h1>Selection of the notary set size</h1></a>
+<p>As mention in our consensus algorithm, we follow the hypergeometric distribution to decide the size of notary set.</p>
+<p>Given a node set of size N, the ratio R of Byzantine nodes, and the notary set of size n, then, the probability that more than 1/3 of notary set is Byzantine nodes is</p>
+<p align="center">
+  <img src="https://imgur.com/wszheq8.png" width="250">
+</p>
+<p>We set the probability to be 10^-8; that is, there is less than one fault during 10000 years in expectation (notary set is re-selected every hour).
+Assume R=1/5. We can derive the proper size of the notary set according to the equation and the result is shown in the following figure.</p>
+<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREyLJEd7CpHNUG3O-uDWQFbiNidL7j5QtoQtvAKw4cNA3KC9Vs7Za0DfkKcU9L_kafIYBWkO7adouO/pubchart?oid=1623853170&amp;format=image" alt="Alt text" /></p>
+<p>For convenience, we give two curves to approximate the data points.
+The first one is y = 70.5 ln(x) - 264, which is the purple dash line and the second one is y = 74 ln(x) - 264, which is the green dash line.
+The following table is the resilience ratio to the Byzantine given the size of notary set and probability 10^-8.</p>
+<table><thead><tr><th> node set size </th><th> notary set size </th><th> resilience </th><th> notary set size </th><th> resilience </th></tr></thead><tbody>
+<tr><td> 200 </td><td> 110 </td><td> 0.199 </td><td> 123 </td><td> 0.220 </td></tr>
+<tr><td> 400 </td><td> 159 </td><td> 0.197 </td><td> 174 </td><td> 0.207 </td></tr>
+<tr><td> 600 </td><td> 187 </td><td> 0.194 </td><td> 203 </td><td> 0.202 </td></tr>
+<tr><td> 800 </td><td> 208 </td><td> 0.197 </td><td> 224 </td><td> 0.202 </td></tr>
+<tr><td> 1000 </td><td> 223 </td><td> 0.197 </td><td> 252 </td><td> 0.202 </td></tr>
+<tr><td> 1500 </td><td> 252 </td><td> 0.199 </td><td> 270 </td><td> 0.204 </td></tr>
+<tr><td> 2000 </td><td> 272 </td><td> 0.199 </td><td> 291 </td><td> 0.207 </td></tr>
+<tr><td> 4000 </td><td> 321 </td><td> 0.207 </td><td> 342 </td><td> 0.209 </td></tr>
+</tbody></table>
+<p>DEXON mainnet will use y = 70.5 ln(x) - 264 to decide the size of the notary set under different sizes of the node set.</p>
+<a class="header" href="#dexon-dkg-tsig-protocol" id="dexon-dkg-tsig-protocol"><h1>DEXON DKG-TSIG Protocol</h1></a>
+<a class="header" href="#parameter" id="parameter"><h3>Parameter</h3></a>
+<ul>
+<li>λ = MAX(One gossip duraion, transaction confirm latency)</li>
+<li>Signature = <a href="https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham">BLS</a></li>
+<li>Curve = CurveFp382_2</li>
+<li>n = size of <code>notary_set</code></li>
+<li>t = <img src="https://latex.codecogs.com/svg.latex?\inline%20\left\lfloor\frac{n}{3}\right\rfloor" /></li>
+</ul>
+<a class="header" href="#notes" id="notes"><h3>Notes</h3></a>
+<ul>
+<li>Complaints and nack complaints are stored in governance contract; therefore, the broadcast is reliable.</li>
+<li>Governance contract will do the sanity check for complaints and nack complaints before adding to its state.</li>
+<li>Once a validator proposed <code>DKGFinal_i</code>, it can no longer propose any complaint.</li>
+</ul>
+<a class="header" href="#phase-1-id-registration" id="phase-1-id-registration"><h2>Phase 1 ID Registration</h2></a>
+<a class="header" href="#-t--0" id="-t--0"><h3>@ T &lt; 0</h3></a>
+<p>Each validator registers its ID(<code>DKGMasterPublicKey_i</code>) with stake.</p>
+<p><strong>After λ</strong></p>
+<p>Each validator <code>i</code> broadcasts a <code>DKGMasterPublicKeyReady_i</code> message.</p>
+<p>Validator waits until seeing more than <code>2t+1</code> <code>DKGGroupPublicKeyReady</code> message than proceeds to Phase 2.</p>
+<a class="header" href="#phase-2-secret-key-share-exchange" id="phase-2-secret-key-share-exchange"><h2>Phase 2 Secret Key Share Exchange</h2></a>
+<a class="header" href="#-t--0-1" id="-t--0-1"><h3>@ T = 0</h3></a>
+<p>Each validator <code>i</code> generates <code>n</code> (<code>n</code> = # of ID registered in phase 1) secret key shares (<code>SK_i,0, SK_i,1, ..., SK_i,n</code>) of order <code>t</code> and the secret key share is sent to the corresponding validator (<code>SK_i,j</code> is sent to validator <code>j</code>) via a secure channel.</p>
+<p>Each validator <code>i</code> broadcasts the master public key (<code>MPK_i = {MPK_i,0, MPK_i,1, ..., MPK_i,t}</code>) of order <code>t</code> associated with the secret key shares.</p>
+<a class="header" href="#phase-3-complaint" id="phase-3-complaint"><h2>Phase 3 Complaint</h2></a>
+<a class="header" href="#-t--0-λ" id="-t--0-λ"><h3>@ T = (0, λ)</h3></a>
+<p>Each validator <code>i</code> calculates public key shares (<code>PK_0,i, PK_1,i, ..., PK_n,i</code>) using corresponding master public key (<code>PK_j,i = F(MPK_j, i)</code>).</p>
+<p>Each validator <code>i</code> verifies if the secret key share <code>SK_j,i</code> is associated with the public key share of validator <code>j</code>, <code>PK_j,i</code>. If the verification fails, <code>i</code> broadcast complaint of <code>j</code>, <code>CMP_i,j</code>.</p>
+<a class="header" href="#phase-4-nack-complaint" id="phase-4-nack-complaint"><h2>Phase 4 Nack Complaint</h2></a>
+<a class="header" href="#-t--λ" id="-t--λ"><h3>@ T = λ</h3></a>
+<p>If validator <code>i</code> did not receive <code>SK_j,i</code>, broadcast nack complaint of <code>j</code>, <code>NCMP_i,j</code>.</p>
+<a class="header" href="#phase-5-anti-nack-complaint" id="phase-5-anti-nack-complaint"><h2>Phase 5 Anti Nack Complaint</h2></a>
+<a class="header" href="#-t--2λ" id="-t--2λ"><h3>@ T = 2λ</h3></a>
+<p>If validator <code>j</code> sees <code>NCMP_i,j</code> for any <code>i</code>, broadcast secret key share <code>SK_j,i</code>.</p>
+<a class="header" href="#phase-6-rebroadcast-secret" id="phase-6-rebroadcast-secret"><h2>Phase 6 Rebroadcast Secret</h2></a>
+<a class="header" href="#-t--3λ" id="-t--3λ"><h3>@ T = 3λ</h3></a>
+<p>If validator <code>k</code> receive <code>SK_j,i</code> for the first time for <code>i</code> != <code>k</code>, broadcast it again.</p>
+<a class="header" href="#phase-7-enforce-complaint" id="phase-7-enforce-complaint"><h2>Phase 7 Enforce Complaint</h2></a>
+<a class="header" href="#-t--4λ" id="-t--4λ"><h3>@ T = 4λ</h3></a>
+<p>If validator <code>k</code> sees <code>SK_j,i</code> for <code>i</code> != <code>k</code>, verifies if the secret key share <code>SK_j,i</code> is associated with the public key share of validator <code>j</code>, <code>PK_j,i</code>. If the verification fails, <code>k</code> broadcast complaint of <code>j</code>, <code>CMP_k,j</code>.</p>
+<p>If validator <code>k</code> sees <code>NCMP_i,j</code> for <code>j</code> != <code>k</code> and did not receive <code>SK_j,i</code>, <code>k</code> broadcast nack complaint of <code>j</code>, <code>NCMP_k,j</code>.</p>
+<a class="header" href="#phase-8-dkg-finalize" id="phase-8-dkg-finalize"><h2>Phase 8 DKG Finalize</h2></a>
+<a class="header" href="#-t--5λ" id="-t--5λ"><h3>@ T = 5λ</h3></a>
+<p>Each validator <code>i</code> broadcast a <code>DKGFinal_i</code> message.</p>
+<a class="header" href="#phase-9-sign-with-csk" id="phase-9-sign-with-csk"><h2>Phase 9 Sign with CSK</h2></a>
+<a class="header" href="#-t--6λ" id="-t--6λ"><h3>@ T = 6λ</h3></a>
+<p>Validator waits until seeing more than <code>2t+1</code> final message.</p>
+<p>If there are more than <code>t</code> nack complaints to validator <code>j</code> (<img src="https://latex.codecogs.com/svg.latex?\inline%20\sum_{i}%20NCMP_{i,j}%20>%20t" /> (<code>i</code> : for all validator <code>i</code>)), then <code>j</code> is marked as <strong>Disqualified</strong>.</p>
+<p>If there is <strong>one</strong> complaint, <code>CMP_i,j</code>, to validator <code>j</code>, then <code>j</code> is marked as <strong>Disqualified</strong>.</p>
+<p>Each validator <code>i</code> determines the combined secret key, <img src="https://latex.codecogs.com/svg.latex?\inline%20CSK_{i}%20=%20\sum_{k}%20SK_{k,i}" /> (<code>k</code>: validator <code>k</code> is not marked as <strong>Disqualified</strong>)</p>
+<p>Each validator <code>i</code> sign the message with <code>CSK_i</code> and broadcast the partial signature, <code>PSign_i</code>.</p>
+<p>Each validator <code>i</code> determines the combined public key of validator <code>j</code>, <img src="https://latex.codecogs.com/svg.latex?\inline%20CPK_{j}%20=%20\sum_{k}%20PK_{k,j}" /> (<code>k</code>: validator <code>k</code> is not marked as <strong>Disqualified</strong>)</p>
+<a class="header" href="#phase-10-tsig" id="phase-10-tsig"><h2>Phase 10 TSIG</h2></a>
+<a class="header" href="#-t--6λ-inf" id="-t--6λ-inf"><h3>@ T = (6λ, +inf)</h3></a>
+<p>If validator <code>i</code> is not <strong>Disqualified</strong>, verify <code>PSign_i</code> with <code>CPK_i</code>.</p>
+<p>Collect more than <code>t</code> valid <code>PSign_i</code> and recover TSIG, <code>TSIG</code>.</p>
+<a class="header" href="#phase-11-verify-tsig" id="phase-11-verify-tsig"><h2>Phase 11 Verify TSIG</h2></a>
+<p>Determines the group public key, <img src="https://latex.codecogs.com/svg.latex?\inline%20GPK%20=%20\sum_{k}%20MPK_{k,0}" /> (<code>k</code>: validator <code>k</code> is not marked as <strong>Disqualified</strong>)</p>
+<p>Verify <code>TSIG</code> with <code>GPK</code>.</p>
+<p>Most blockchains do not have a random source since they are not able to generate an on-chain random number that can not be predicted beforehand. DEXON solves this problem by using threshold signature with BLS scheme. Since this final threshold signature is only known after they are being gathered together, one can not predict the signature before sending the transaction that would be included in the given block.</p>
+<p>If you look at the block result using the RPC:</p>
+<pre><code>{
+    &quot;jsonrpc&quot;: &quot;2.0&quot;,
+    &quot;id&quot;: 1,
+    &quot;result&quot;: {
+        &quot;dexconMeta&quot;: &quot;...&quot;,
+        &quot;extraData&quot;: &quot;0x&quot;,
+        &quot;gasLimit&quot;: &quot;0x7a1200&quot;,
+        &quot;gasUsed&quot;: &quot;0x238f8&quot;,
+        &quot;hash&quot;: &quot;0x78ba157ae54a4784e1f0edbdac2b14e1f38f519d34d3d3164d75016ac90e8227&quot;,
+        &quot;logsBloom&quot;: &quot;...&quot;,
+        &quot;miner&quot;: &quot;0xb6a2e270b54f19b4002d6535a71cfdd1ca1f5fc1&quot;,
+        &quot;mixHash&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;,
+        &quot;nonce&quot;: &quot;0x0000000000000000&quot;,
+        &quot;number&quot;: &quot;0x100&quot;,
+        &quot;parentHash&quot;: &quot;0x8da90bea16f9a6edf022030766950636caad7fbd0ef296e7d34da052d0fa4ca7&quot;,
+        &quot;randomness&quot;: &quot;0x895736dfafa3ce4e0f051fac7cc218cb092b67e88b7c25f4cf90e496e91c7d10e55a251e0ff6e655fdc8d866b85fe30c&quot;,
+        &quot;receiptsRoot&quot;: &quot;0xc627d0acef6f0592ffd775e05b4f6b36dce8065a217bf4c9fec0c538b8b46b7d&quot;,
+        &quot;sha3Uncles&quot;: &quot;0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347&quot;,
+        &quot;size&quot;: &quot;0x67b&quot;,
+        &quot;stateRoot&quot;: &quot;0xb728e453a70d2c6d5f9a00857aa697740c16770a696dd8a6594876c2b6f85a84&quot;,
+        &quot;timestamp&quot;: &quot;0x5bcf0935&quot;,
+        &quot;totalDifficulty&quot;: &quot;0x20100&quot;,
+        &quot;transactions&quot;: [
+          ...
+        ],
+        &quot;transactionsRoot&quot;: &quot;0x1b1e6b2a70de752b563fbeedb0461dca4af0c56e8dd3147b7a7ea3b2a701f6e6&quot;,
+        &quot;uncles&quot;: []
+    }
+}
+</code></pre>
+<p>You can see there is a <code>randomness</code> field which standard Ethereum RPC does not have. This <code>randomness</code> field is actually the threshold signature of the block signed by the DKG set.</p>
+<p>The DEXON blockchain exposes this randomness source in Solidity with the <code>rand</code> variable, which when accessed, generates a deterministic random number. 'deterministic' means that all nodes will generate the same random number when running the EVM using the block randomness source. The <code>rand</code> variable compiles to a new opcode <code>RAND (0x2f)</code>
+we added into EVM. The random number is calculated with the following formula:</p>
+<pre><code>rand = Keccak( Randomness . Caller . Nonce . RandCallIndex )
+</code></pre>
+<ul>
+<li><code>Randomness</code> is the block randomness signed by DKG set, unique for each block.
+<ul>
+<li>Note: <code>Randomness</code> field is not available in the initial round.</li>
+</ul>
+</li>
+<li><code>Caller</code> is the address of the contract caller.</li>
+<li><code>Nonce</code> is the account nonce of the original caller.</li>
+<li><code>RandCallIndex</code> number of times OP_RAND is called in the current transaction.</li>
+</ul>
+<a class="header" href="#dexon-network-cryptoeconomics" id="dexon-network-cryptoeconomics"><h1>DEXON Network Cryptoeconomics</h1></a>
+<p>DEXON Foundation  Last Modified 2019/3/4    v6.0</p>
+<p align="center">
+  <img src="https://imgur.com/Odmv6d6.png" width="400">
+</p>
+<p>*This document describes the current plan and vision for the DEXON Network platform. While we intend to attempt to realize this vision, please recognize that it is dependent on a number of factors and subject to a wide range of risks. We do not guarantee, represent or warrant any of the statements in this document, because they are based on our current beliefs, expectations and assumptions, about which there can be no assurance due to various anticipated and unanticipated events that may occur. Please know that we seek to achieve the vision laid out in our whitepaper and website, but that you cannot rely on any of it coming true. Blockchain, cryptocurrencies, other aspects of our technology and these markets are in their infancy and will be subject to many challenges, competition and a changing environment.</p>
+<a class="header" href="#token-allocation" id="token-allocation"><h2>Token Allocation</h2></a>
+<p>The total supply of DXN tokens is fixed at <strong>4 billion</strong>. The genesis token supply is <strong>1 billion</strong> DXN and the other <strong>3 billion</strong> DXN will be minted as mining rewards after DEXON mainnet launches. The token allocation is shown below:</p>
+<p align="center">
+  <img src="https://imgur.com/758a1nE.png" width="500">
+  <br></br>
+  <b> Figure 1. Token Allocation </b>
+</p>
+<ul>
+<li>
+<p>75% for Miner’s Reward</p>
+<p>For rewarding miners that actively participate in network consensus and smart contract
+executions on DEXON Network.</p>
+</li>
+<li>
+<p>25% for Genesis Supply</p>
+<p>The genesis supply will be distributed to 4 parties, including DEXON Foundation / Team and<br />
+private sale token purchasers under different vesting schedules.</p>
+</li>
+</ul>
+<a class="header" href="#mining-model" id="mining-model"><h2>Mining Model</h2></a>
+<p>Nodes that actively participate in validating transactions will get DXN tokens as mining rewards based on DEXON’s Proof of Participation Model.</p>
+<a class="header" href="#proof-of-participation-model" id="proof-of-participation-model"><h3>Proof-of-Participation Model</h3></a>
+<ul>
+<li>Validator Eligibility</li>
+</ul>
+<p>A node is eligible to join as a validator if its DXN token deposit reaches the threshold of 1 million DXN. The deposit can come from the node itself or from any other accounts that support the node. It takes 24 hours for the deposit to become effective, and another 24 hours for deposit withdrawals to become effective.</p>
+<ul>
+<li>Symmetric Validator Power</li>
+</ul>
+<p>The validating power and the probability to be selected as a block producer among all validators are both fair and symmetric, meaning that the expected mining rewards of each validator will be the same as well.</p>
+<ul>
+<li>Mining Rewards</li>
+</ul>
+<p>A validator earns transaction processing fees, gas fees, and mining rewards when it actively produces blocks and acks to other blocks.</p>
+<a class="header" href="#adaptive-mining-mechanism" id="adaptive-mining-mechanism"><h2>Adaptive Mining Mechanism</h2></a>
+<p>DEXON adopts a novel adaptive mining mechanism that can self-adjust the token minting velocity. The token minting velocity is proportional to the participation rate of mining. If the demand of DXN token is strong, it will attract more token holders to participate in mining for rewards, hence the minting velocity will increase, and vice versa. This will make sure the system can keep demand and supply balanced by itself.</p>
+<p>The formula of minting velocity is stated below:</p>
+<p align="center">
+  <img src="https://imgur.com/4gMwxZo.png" width="400">
+</p>
+r is total supply growth rate (the annual growth rate of total supply), vis node mining velocity (the annual mining rate of each node), and  is mining participation rate (the percentage of deposited tokens in validators relative to current total token circulation). 
+Initially, v is 18.75% and will alter based on the total minted tokens under a half-life condition. 
+The relation between node mining velocity and minted tokens is shown below:
+<ul>
+<li>
+<p>v= 18.75% when mainnet launches.</p>
+</li>
+<li>
+<p>v= 9.375% after 1.5 billion DXN tokens are minted.</p>
+</li>
+<li>
+<p>v= 4.6875% after another 750 million DXN tokens are minted,  and so on.</p>
+</li>
+</ul>
+<p>As an example, inniitialy each node can mine 1M * 18.75% = 187.5K DXN tokens per year. As total minted tokens hit 1. 5B DXN, the annual mining rate per node will decrease from 18.75% to 9.375%, and as total minted tokens hit 2. 25B DXN, the annual per node mining rate will decrease further from 9.375% to 4.6875%, and so on.</p>
+<p align="center">
+  <img src="https://imgur.com/Yu1Lanm.png" width="400">
+  <br></br>
+  <b> Figure 2. Node Mining Velocity Half-Life Threshold </b>
+</p>
+<a class="header" href="#mining-rewards-in-circulation" id="mining-rewards-in-circulation"><h2>Mining Rewards in Circulation</h2></a>
+<p>Now, let’s consider the influence of mining participation rate. For example, the genesis supply of DXN token is 1 billion, if 500 millions tokens are deposited in validating nodes, the mining participation rate will be 50%. So the total supply growth rate will be 18.75% * 50% = 9.375%.
+The total mining rewards in circulation based on different participation rates (30%, 50%, 70%) is shown in the figure below:</p>
+<p align="center">
+  <img src="https://imgur.com/q9lCPOK.png" width="600">
+  <br></br>
+  <b> Figure 3. Total Mining Rewards in Circulation </b>
+</p>
+<p>Assuming the mining participation rate is fixed at 50%, r(total supply growth rate) per year is shown below:</p>
+<p align="center">
+  <img src="https://imgur.com/Y8lqtzp.png" width="600">
+  <br></br>
+  <b> Figure 4. Total Mining Rewards in Circulation </b>
+</p>
+<!---
+## Genesis Allocation
+As stated above, the genesis supply is 1 billion DXN and the allocation is shown below:
+<p align="center">
+  <img src="https://imgur.com/XhtJBjk.png" width="600">
+  <br></br>
+  <b> Figure 5. Genesis Supply Allocation </b>
+</p>
+<ul>
+<li>38.5% to Private Sale Purchasers (Genesis allocation, under 1-year vesting)
+For building strategic partnerships with influential industry entities and growing the
+DApps ecosystem.</li>
+<li>1.5 % to Public Sale Purchasers (Genesis allocation, no lock-up condition)
+For distributing tokens to early developers / users.</li>
+<li>40% to DEXON Foundation (Genesis allocation, under 4-year vesting)
+For long-term network development funding and governance, advisory, airdrops, etc.</li>
+<li>20% to Founding team (Genesis allocation, under 4-year vesting)
+For incentivising the founding team members and core developers.</li>
+</ul>
+<a class="header" href="#private-sale-385" id="private-sale-385"><h3>Private Sale (38.5%)</h3></a>
+<p>DEXON Foundation only allows world-famous VC firms, crypto funds, and DEXON DApps ecosystem partners to participate in the private sale. The goal of the private sale is to build up partnership relationships and grow the DEXON DApps ecosystem.
+According to the purchased amount, a private sale purchaser will be granted an additional bonus of DXN tokens as shown in the figure below. Note that the bonus structure is tier-based and cumulative.</p>
+<p align="center">
+  <img src="https://imgur.com/wK3gFAe.png" width="600">
+  <br></br>
+  <b> Figure 6. Private Sale Purchaser Additional Bonus </b>
+</p>
+<p>DXN tokens sold in private sale will be under a 1-year lock-up condition. 3 months after mainnet launches, 10% of DXN tokens will be vested, while each month thereafter, an additional 10% of DEX tokens will be vested in the following 10 months. The bonus portion will be vested 12 months after mainnet launch.</p>
+<p>The vesting schedule is as follows:</p>
+<ul>
+<li>3rd - 12th month after mainnet launch: 10%</li>
+<li>13th month after mainnet launch: bonus portion</li>
+</ul>
+<p>For example, if one purchases 10M USD for 100M DXN tokens, his bonus will be as presented below:</p>
+<ul>
+<li>1-2M tier: 5% bonus, 0.5M DXN tokens</li>
+<li>2-3M tier: 10% bonus, 1M DXN tokens</li>
+<li>3-4M tier: 15% bonus, 1.5M DXN tokens</li>
+<li>4-5M tier: 20% bonus, 2M DXN tokens</li>
+<li>5M+ tier: 25% bonus, 12.5M DXN tokens
+In total, the purchaser will get additional 17.5M DXN tokens as bonus. The vesting schedule would be as shown below:</li>
+</ul>
+<p align="center">
+  <img src="https://imgur.com/i9G8paO.png" width="600">
+  <br></br>
+  <b> Figure 7. Private Sale Purchaser Token Vesting Chart </b>
+</p>
+<a class="header" href="#public-sale-15" id="public-sale-15"><h3>Public Sale (1.5%)</h3></a>
+<p>DEXON Foundation will sell DXN tokens to the public. The goal of public sale is to distribute tokens to early developers and users. The price of each DXN token in the public sale will be 0.2 USD.
+All DXN tokens sold in public sale will be vested when mainnet launches.</p>
+<a class="header" href="#dexon-foundation-reserved-40" id="dexon-foundation-reserved-40"><h3>DEXON Foundation Reserved (40%)</h3></a>
+<p>DEXON Foundation reserves DXN tokens for long-term network development funding and governance, advisory, airdrop and more. Most of the vested DXN tokens will be distributed to the public in the long run to ensure long-term network decentralization.
+DEXON Foundation’s reserved tokens are under a 4-year vesting schedule. When the mainnet launches, 20% of DXN tokens will be vested, while each year thereafter, an additional 20% of DXN tokens will be vested. The vesting schedule is shown below:</p>
+<ul>
+<li>Mainnet launch: 20%</li>
+<li>1st to 4th year after mainnet launch: 20%</li>
+</ul>
+<a class="header" href="#dexon-founding-team-reserved-20" id="dexon-founding-team-reserved-20"><h3>DEXON Founding Team Reserved (20%)</h3></a>
+<p>DEXON founding team reserved DXN tokens are to incentivize the founding team members and core developers. These tokens are under a 4-year vesting schedule. When the mainnet launches, 20% of the tokens will be vested, while each year thereafter, an additional 20% of DXN tokens will be vested. The vesting schedule is shown below:</p>
+<ul>
+<li>Mainnet launch: 20%</li>
+<li>1st to 4th year after mainnet launch: 20%</li>
+</ul>
+<a class="header" href="#token-circulation" id="token-circulation"><h2>Token Circulation</h2></a>
+<p>The total DXN tokens in circulation will gradually increase as mining rewards are minted and the initial token holder’s tokens are vested.</p>
+<ol>
+<li>75% to DEXON Miners (Mining rewards, responsive half-life condition)</li>
+<li>25% for Genesis Supply</li>
+</ol>
+<ul>
+<li>38.5% to Private Sale Purchasers (Genesis allocation, under 1-year vesting)</li>
+<li>1.5% to Public Sale Purchasers (Genesis allocation, no lock-up condition)</li>
+<li>40% to DEXON Foundation (Genesis allocation, 4-year vesting)</li>
+<li>20% to Founding team (Genesis allocation, under 4-year vesting)
+Assuming the mining participation rate is fixed at 50%, 30 years after mainnet launch, about 98.8% (3,953,284,807 / 4,000,000,000) of DXN tokens will be in  public circulation. The long-term total token circulation chart is shown below:</li>
+</ul>
+<p align="center">
+  <img src="https://imgur.com/Mp3ABWU.png" width="600">
+  <br></br>
+  <b> Figure 8. Long-Term DXN Tokens in Circulation  </b>
+</p>
+<p>For the first 16 quarters after mainnet launch, the composition of DXN token circulation is shown below:</p>
+<p align="center">
+  <img src="https://imgur.com/Fj1sCHG.png" width="600">
+  <br></br>
+  <b> Figure 9. Short-Term DXN Tokens in Circulation  </b>
+</p>
+<p>--&gt;</p>
+<a class="header" href="#use-of-funds" id="use-of-funds"><h2>Use of Funds</h2></a>
+<p>The funds received from the DXN token sale will be used for three main purposes:</p>
+<a class="header" href="#technical-development-40" id="technical-development-40"><h3>Technical Development 40%</h3></a>
+<p>For DEXON developers / researchers and partnerships with academic research institutions.</p>
+<a class="header" href="#ecosystem-development-40" id="ecosystem-development-40"><h3>Ecosystem Development 40%</h3></a>
+<p>For community building, corporate partnerships, developer conferences, DApps hackathons, business development, branding, etc.</p>
+<a class="header" href="#operational-costs-20" id="operational-costs-20"><h3>Operational Costs 20%</h3></a>
+<p>For daily operations / network governance / legal / accounting costs of DEXON Foundation.</p>
+<p align="center">
+  <img src="https://imgur.com/VUjeXNw.png" width="600">
+  <br></br>
+  <b> Figure 10. Use of Funds </b>
+</p>
+<a class="header" href="#disclaimer" id="disclaimer"><h2>DISCLAIMER</h2></a>
+<p><strong>PLEASE READ THIS DISCLAIMER SECTION CAREFULLY.  CONSULT LEGAL AND FINANCIAL EXPERTS FOR FURTHER GUIDANCE.</strong>
+The following information may be incomplete and in no way implies a contractual relationship. While we make every effort to ensure that all information in this Whitepaper is accurate and up to date, such material in no way constitutes professional advice. DEXON Foundation neither guarantees nor accepts responsibility for the accuracy, reliability, or completeness of this content. The content may be subject to change at any time without prior notice. Individuals intending to purchase platform token should seek independent professional advice prior to acting on any of the information contained in this paper.</p>
+<p><strong>Disclaimer – DXN Tokens and DEXON Foundation</strong></p>
+<ol>
+<li>
+<p>Not Securities.
+Use and purchase of the DXN Tokens carries significant financial risk.  DEXON Foundation hereby expressly disclaims that the transactions taking place on its platform pertain in any way to an offering of securities in any jurisdiction or that any documents published on its platform are solicitations for investment.</p>
+</li>
+<li>
+<p>Security of Platform.
+You acknowledge that information you store or transfer through DEXON Foundation may become irretrievably lost or corrupted or temporarily unavailable due to a variety of causes, including software failures, protocol changes by third party providers, internet outages, force majeure event or other disasters including third party DDOS attacks, scheduled or unscheduled maintenance, or other causes either within or outside DEXON Foundation’s control.  You are solely responsible for backing up and maintaining duplicate copies of any information you store or transfer through DEXON Foundation’ services</p>
+</li>
+<li>
+<p>No Responsibilities for DXN Tokens
+Use and purchase of the DXN Tokens carries significant financial risk. DEXON Foundation does not provide token purchase, financial, or legal advice. The documents provided to you cannot substitute for professional advice and independent factual verification. You warrant that you have conducted your own research and analysis, independently verify any information upon which you wish to rely, consider your own personal circumstances and goals, and obtain independent financial advice from appropriate professionals before making any token purchase decision or taking any other action including without limitation purchasing any DXN Tokens. You further acknowledge and agree that DEXON Foundation has no obligation of due diligence or fiduciary duty toward you.</p>
+</li>
+<li>
+<p>No Liability.
+Neither DEXON Foundation nor any person or entity associated with it, including but not limited to its agents, servants, employees, insurers, attorneys, successors, and assigns, will be liable, whether in contract, tort (including negligence), or otherwise, for any damage, expense, or other loss you may suffer arising out of any use of the DXN Tokens.</p>
+</li>
+<li>
+<p>Technology - Sophistication.
+Tokens are often described in exceedingly technical language; a comprehensive understanding of applied cryptography and computer science is required in order to appreciate inherent risks.  You represent and warrant that you have sufficient knowledge, market sophistication, experience, and/or professional advice sufficient to undertake a prudent evaluation of the merits and risks of purchasing the DXN Tokens. You agree to bear sole responsibility for the aforementioned purchase.</p>
+</li>
+</ol>
+<ol start="6">
+<li>
+<p>Technology - No guarantee.
+Neither DEXON Foundation nor its affiliates owns or controls any of the underlying software through which blockchain networks are formed. Neither DEXON Foundation nor its affiliates makes any guarantee of functionality, security, or availability of such software and networks.</p>
+</li>
+<li>
+<p>Technology - Forks.
+The blockchain technology underlying tokens is subject to change at any time, including changes in operating rules (commonly referred to as “forks”), and blockchain networks may go offline as a result of bugs, hard forks, or a number of other unforeseeable reasons. Such changes may materially and adversely affect the value or function of the DXN Tokens. You agree that you are fully responsible for monitoring such changes and agree to bear all risks arising therefrom or relating thereto.</p>
+</li>
+<li>
+<p>Technology - Malicious Nodes.
+Some nodes in the DEXON Foundation network may be malicious and attempt to get rewarded without corresponding contribution; also, attackers may try to ruin the DEXON Foundation ecosystem if they only suffer from minimal penalties. We need strong guarantees to protect the network from malicious attacks to ensure that the transactions are secured and the ecosystem is sustainable. Some attacks that could threaten a blockchain network are listed and discussed as follows:
+Sybil Attack
+Malicious nodes could create multiple Sybil identities to strive for more rewards or cheat the network. In general, the proof mechanism should have established barriers to prevent Sybil attacks; however, there is no guarantee such barriers will always be successful.
+Out-of- Work Attack
+While an attacker can control a lot of nodes, the nodes could be used to make some troubles on a distributed computing network. The nodes controlled by malicious attackers could be called zombies. An attack methodology is to ask the zombie nodes to quit or go on a strike at one time. On DEXON Foundation network, the zombie nodes may take AI jobs but fail to complete them or return invalid results. If an AI job is assigned to a group of which most are zombie nodes, the AI job would receive unauthentic results or just simply fail.
+Outsourcing Attack
+Malicious nodes may outsource their jobs to other nodes, such that they may earn the rewards easily without consuming the corresponding computing power. On DEXON Foundation network, nodes should present their capabilities to strive for taking jobs. Validation of node capabilities based on Proof-of-Intelligence may mitigate the behavior of outsourcing attack because the malicious nodes would lose their jobs if they do not endeavor to execute the same; however, there is no guarantee this approach will always be successful.
+Cyber-attacks
+In the event of a cyberattack on the DXN Tokens or the DEXON Foundation, the DXN Tokens may be adversely affected. Neither DEXON Foundation nor its affiliates makes any guarantee that it may foresee, prevent, mitigate, or take corrective action in the event of such attack.</p>
+</li>
+<li>
+<p>Regulatory Measures
+Crypto-tokens are being, or may be overseen by the regulatory authorities of various jurisdictions. DEXON Foundation may receive queries, notices, warnings, requests, or rulings from one or more regulatory authorities from time to time or may even be ordered to suspend or discontinue any action in connection with the DXN Tokens. The development of the DXN Tokens may be seriously affected, hindered, or terminated as a result.</p>
+</li>
+<li>
+<p>Illiquidity and Price Volatility
+There may not be a demand for DXN Tokens. DEXON Foundation is not responsible for the circulation and trading of DXN Tokens on the market. Tokens, if traded on markets, usually have extremely volatile prices. Fluctuations in price over short periods of time frequently occur, which price may be denominated in Bitcoin, Ether, US Dollars or any other fiat currency. Such fluctuations could result from market forces (including speculations), regulatory changes, technical innovations, availability of exchanges, and other objective factors and represent changes in the balance of supply and demand.
+DEXON Foundation does not make any representation or warranty, explicit or implicit, as to the usability or the value of the DXN Tokens. You understand and accept that there is no warranty or assurance that you will receive any benefits through the DXN Tokens.</p>
+</li>
+<li>
+<p>Compliance by Users.
+You acknowledge and agree that DEXON Foundation is not responsible for determining whether or which laws, rules, or regulations apply or may apply to your transactions (including, without limitation, any anti-money laundering laws, securities laws and tax laws). You acknowledge and agree that you are in compliance with all such laws, rules, or regulations as may be applicable to your transactions. Without limiting the foregoing, you acknowledge and agree that you are solely responsible for all tax obligations arising from your purchase of the DXN Tokens. You further acknowledge and agree that DEXON Foundation shall not be liable, whether directly or indirectly, for any of your tax obligations.
+Applicable law, regulation, and executive orders may require DEXON Foundation to, upon request by government agencies, disclose information regarding your account(s). In the event such disclosure is compelled, you agree that DEXON Foundation may disclose information regarding your accounts. While DEXON Foundation will endeavor to, where commercially reasonable, give you prior notice of such disclosure, DEXON Foundation makes no guarantees that such prior notice will be made.</p>
+</li>
+</ol>
+<p>The DEXON governance contract is implemented in Go, but it's ABI compatible with Solidity.</p>
+<p>The governance contract address is located at <code>0x63751838d6485578b23e8b051d40861ecc416794</code></p>
+<p>The equivalent solidity interface can be found in the <a href="https://github.com/dexon-foundation/governance-abi/blob/master/contracts/Governance.sol">dexon-foundation/governance-abi</a> repo. The governance contract ABI is as follows:</p>
+<!-- DO NOT EDIT BELOW THIS LINE!! The below part is automatically generated from the governance-abi ci flow and any modification below will be lost. -->
+<!-- [[ABI AUTOGEN START]] -->
+```
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "notarySetSize",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "dkgMasterPublicKeyProposed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "totalSupply",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "nodes",
+    "outputs": [
+      {
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "name": "publicKey",
+        "type": "bytes"
+      },
+      {
+        "name": "staked",
+        "type": "uint256"
+      },
+      {
+        "name": "fined",
+        "type": "uint256"
+      },
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "email",
+        "type": "string"
+      },
+      {
+        "name": "location",
+        "type": "string"
+      },
+      {
+        "name": "url",
+        "type": "string"
+      },
+      {
+        "name": "unstaked",
+        "type": "uint256"
+      },
+      {
+        "name": "unstakedAt",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "notaryParamBeta",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "miningVelocity",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "lambdaBA",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "minStake",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "crsRound",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "notaryParamAlpha",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "dkgFinalizeds",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "blockGasLimit",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "dkgRound",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "totalStaked",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "nodesOffsetByAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "crs",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "roundLength",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "nextHalvingSupply",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "dkgComplaints",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "dkgMPKReadys",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "lastHalvedAmount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "finedRecords",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "lambdaDKG",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "fineValues",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "roundHeight",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "dkgMPKReadysCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "minBlockInterval",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "dkgMasterPublicKeys",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "lastProposedHeight",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "minGasPrice",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "dkgFinalizedsCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "dkgComplaintsProposed",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "nodesOffsetByNodeKeyAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "lockupPeriod",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "dkgResetCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "ConfigurationChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "Round",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "CRS",
+        "type": "bytes32"
+      }
+    ],
+    "name": "CRSProposed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "NewOwnerAddress",
+        "type": "address"
+      }
+    ],
+    "name": "NodeOwnershipTransfered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "PublicKey",
+        "type": "bytes"
+      }
+    ],
+    "name": "NodePublicKeyReplaced",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "Amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Staked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "Amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Unstaked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "Amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Withdrawn",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      }
+    ],
+    "name": "NodeAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      }
+    ],
+    "name": "NodeRemoved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "Type",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "Arg1",
+        "type": "bytes"
+      },
+      {
+        "indexed": false,
+        "name": "Arg2",
+        "type": "bytes"
+      }
+    ],
+    "name": "Reported",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "Amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Fined",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "NodeAddress",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "Amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "FinePaid",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "Round",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "BlockHeight",
+        "type": "uint256"
+      }
+    ],
+    "name": "DKGReset",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "NewOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "MinStake",
+        "type": "uint256"
+      },
+      {
+        "name": "LockupPeriod",
+        "type": "uint256"
+      },
+      {
+        "name": "MinGasPrice",
+        "type": "uint256"
+      },
+      {
+        "name": "BlockGasLimit",
+        "type": "uint256"
+      },
+      {
+        "name": "LambdaBA",
+        "type": "uint256"
+      },
+      {
+        "name": "LambdaDKG",
+        "type": "uint256"
+      },
+      {
+        "name": "NotaryParamAlpha",
+        "type": "uint256"
+      },
+      {
+        "name": "NotaryParamBeta",
+        "type": "uint256"
+      },
+      {
+        "name": "RoundLength",
+        "type": "uint256"
+      },
+      {
+        "name": "MinBlockInterval",
+        "type": "uint256"
+      },
+      {
+        "name": "FineValues",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "updateConfiguration",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "NewOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferNodeOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "NewPublicKey",
+        "type": "bytes"
+      }
+    ],
+    "name": "replaceNodePublicKey",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "nodesLength",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "Round",
+        "type": "uint256"
+      },
+      {
+        "name": "SignedCRS",
+        "type": "bytes"
+      }
+    ],
+    "name": "proposeCRS",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "Complaint",
+        "type": "bytes"
+      }
+    ],
+    "name": "addDKGComplaint",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "PublicKey",
+        "type": "bytes"
+      }
+    ],
+    "name": "addDKGMasterPublicKey",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "MPKReady",
+        "type": "bytes"
+      }
+    ],
+    "name": "addDKGMPKReady",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "Finalize",
+        "type": "bytes"
+      }
+    ],
+    "name": "addDKGFinalize",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "PublicKey",
+        "type": "bytes"
+      },
+      {
+        "name": "Name",
+        "type": "string"
+      },
+      {
+        "name": "Email",
+        "type": "string"
+      },
+      {
+        "name": "Location",
+        "type": "string"
+      },
+      {
+        "name": "Url",
+        "type": "string"
+      }
+    ],
+    "name": "register",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "stake",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "Amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "unstake",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "withdraw",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "NodeAddress",
+        "type": "address"
+      }
+    ],
+    "name": "payFine",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "Type",
+        "type": "uint256"
+      },
+      {
+        "name": "Arg1",
+        "type": "bytes"
+      },
+      {
+        "name": "Arg2",
+        "type": "bytes"
+      }
+    ],
+    "name": "report",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "NewSignedCRS",
+        "type": "bytes"
+      }
+    ],
+    "name": "resetDKG",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
+```
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<!-- [[ABI AUTOGEN END]] -->
+<a class="header" href="#configuration-change" id="configuration-change"><h1>Configuration Change</h1></a>
+<a class="header" href="#overview-1" id="overview-1"><h2>Overview</h2></a>
+<p>The configuration for DEXON is round based configuration, which is allowed to be changed and applied in upcoming rounds on the fly without shutdowning/forking the system. Configurable parameters including:</p>
+<ul>
+<li>NumChains: the number of chains in blocklattice.</li>
+<li>K: the <code>K</code> parameter used in total ordering algorithm.</li>
+<li>PhiRatio: the <code>Phi</code> parameter used in total ordering algorithm with this equation: <code>Phi = NumChains * PhiRation</code>.</li>
+<li>NotarySetSize: the number of nodes in one notary set for one chain.</li>
+<li>DKGSetSize: the number of nodes in DKG set.</li>
+<li>RoundInterval: the interval for this round.</li>
+<li>MinBlockInterval: the minimum interval of timestamps between blocks on the same chain.</li>
+</ul>
+<a class="header" href="#configuration-change-for-byzantine-agreement" id="configuration-change-for-byzantine-agreement"><h2>Configuration Change for Byzantine Agreement</h2></a>
+<p>The round for agreement module on each chain is unique. Therefore, the only configuration change needs to be handled in this module is adding new chains.</p>
+<a class="header" href="#configuration-change-for-blocklattice" id="configuration-change-for-blocklattice"><h2>Configuration Change for Blocklattice</h2></a>
+<p>There would be blocks from multiple rounds in blocklattice at the same time. Thus the simplest way to make it supports various numbers of chains is to make it support the maximum number of chains. The blocklattice module would resize its internal structure to fulfill the largest number of chains it sees.</p>
+<a class="header" href="#configuration-change-for-total-ordering" id="configuration-change-for-total-ordering"><h2>Configuration Change for Total Ordering</h2></a>
+<p>We can't tolerant more than one set of parameters (K, Phi, NumChains) in this module, they are basis for the potential functions used in total ordering thus should be global and unique in total ordering module. The configuration switching procedure used in DEXON for total ordering is <code>Flush</code>.</p>
+<a class="header" href="#flush-procedures" id="flush-procedures"><h3>Flush Procedures</h3></a>
+<ul>
+<li>When there are configuration change at round <code>R+1</code>, the <code>flush setup procedure</code> would be triggered when the first <strong>ending block</strong> on some chain for round R is delivered by total ordering.</li>
+<li>Once <code>flush setup procedure</code> triggered, no blocks would be delivered until all <strong>ending blocks</strong> for round R on each chain is received by total ordering module. Once this condition is met, the total ordering would enter <code>flush main procedure</code>.</li>
+<li>In <code>flush main procedure</code>, all blocks in round <code>R</code> would be delivered directly in topological order based on their acking relationships. Blocks at round <code>R+1</code> would be skipped during flush. Since the acking relations between blocks in different rounds are restricted, the causality between blocks is preserved.</li>
+<li>Once all blocks in round <code>R</code> is flushed, the total ordering module switches back to normal delivery mode, that is, delivered by total ordering algorithm.</li>
+</ul>
+<a class="header" href="#rules-for-acking-relations-for-blocks-between-rounds" id="rules-for-acking-relations-for-blocks-between-rounds"><h3>Rules for acking relations for blocks between rounds</h3></a>
+<p>No block in round R should ack blocks in future round (R+1, R+2, ...), even if their are proposed earlier. This rule is required because:</p>
+<ul>
+<li>We would deliver blocks without rounds interleave when flushing, to maintain the causality between blocks, all blocks delivered ealier should not ack blocks delivered later.</li>
+<li>Blocks in R+1 round might be picked as candidates when flushing. We would ignore those candidates from R+1 directly, based on the causality preserved by this rule.</li>
+</ul>
+<a class="header" href="#resource" id="resource"><h1>Resource</h1></a>
+<a class="header" href="#dexon-comparison-to-other-blockchain" id="dexon-comparison-to-other-blockchain"><h1>DEXON Comparison to Other Blockchain</h1></a>
+<a class="header" href="#introduction-1" id="introduction-1"><h3>Introduction</h3></a>
+<p>This document explains how DEXON is different compared to other blockchain infrastructures. We do our best to explain the main differences, but still, we have the following principles:</p>
+<ol>
+<li>We will not dive into details of other projects. We only focus on the differences. For the details, please refer to their websites and whitepapers.</li>
+<li>The comparison is based on our current understanding, and projects can be updated frequently. We will update this document if necessary.</li>
+</ol>
+<a class="header" href="#definition" id="definition"><h3>Definition</h3></a>
+<ul>
+<li>Node in this document is a validator or a full node in the network.</li>
+<li><img src="https://latex.codecogs.com/svg.latex?T_{network}" />: network delay between nodes</li>
+<li><img src="https://latex.codecogs.com/svg.latex?n" />: number of nodes</li>
+<li><img src="https://latex.codecogs.com/svg.latex?b" />: number of blocks to be confirmed</li>
+<li><img src="https://latex.codecogs.com/svg.latex?f" />: ack frequency</li>
+<li>For smart contract column:
+<ul>
+<li>O: Supprted</li>
+<li>X: Not supported</li>
+<li>△: Not supported for now, but is able to support</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#table-of-contents" id="table-of-contents"><h3>Table of Contents</h3></a>
+<table><thead><tr><th> Project </th><th> Throughput (TPS) </th><th> Latency (seconds) </th><th> Data Structure </th><th> Consensus </th><th> Smart Contract </th></tr></thead><tbody>
+<tr><td><a href="#dexon">DEXON</a></td><td>1M+</td><td>1</td><td>DAG</td><td>Byzantine agreement + Total ordering</td><td>O</td></tr>
+<tr><td><a href="#algorand">Algorand</a></td><td>875</td><td>&lt; 60</td><td>chain</td><td>Byzantine agreement</td><td>△</td></tr>
+<tr><td><a href="#bitcoin">Bitcoin</a></td><td>7</td><td>3600</td><td>chain</td><td>longest chain rule</td><td>X</td></tr>
+<tr><td><a href="#cardano">Cardano</a></td><td>250</td><td>300</td><td>chain</td><td>Ouroboros</td><td>O</td></tr>
+<tr><td><a href="#conflux">Conflux</a></td><td>6400</td><td>270</td><td>DAG</td><td>GHOST</td><td>△</td></tr>
+<tr><td><a href="#dfinity">Dfinity</a></td><td>500 ~ 1000</td><td>5 ~ 10</td><td>chain</td><td>Dfinity</td><td>O</td></tr>
+<tr><td><a href="#eos">EOS</a></td><td>3K</td><td>165</td><td>chain</td><td>longest chain &amp; Byzantine fault tolerance</td><td>O</td></tr>
+<tr><td><a href="#ethereum">Ethereum</a></td><td>20</td><td>360</td><td>chain</td><td>longest chain</td><td>O</td></tr>
+<tr><td><a href="#hashgraph">Hashgraph</a></td><td>200K</td><td>20</td><td>DAG</td><td>Hedera</td><td>O</td></tr>
+<tr><td><a href="#hyperledger">Hyperledger</a></td><td>4K</td><td>&lt; 1</td><td>chain</td><td>pluggable</td><td>O</td></tr>
+<tr><td><a href="#iota">IOTA</a></td><td>500 ~ 800</td><td>&gt; 180</td><td>DAG</td><td>longest chain rule</td><td>X</td></tr>
+<tr><td><a href="#kadena">Kadena</a></td><td>10K</td><td>20</td><td>DAG</td><td>Chainweb</td><td>O</td></tr>
+<tr><td><a href="#nano">NANO</a></td><td>7000</td><td>1</td><td>DAG</td><td>DPoS voting</td><td>X</td></tr>
+<tr><td><a href="#omniledger">Omniledger</a></td><td>6K</td><td>10</td><td>chain</td><td>ByzCoinX</td><td>△</td></tr>
+<tr><td><a href="#ontology">Ontology</a></td><td>5K</td><td>20</td><td>DAG</td><td>Ontorand</td><td>O</td></tr>
+<tr><td><a href="#orbs-helix">Orbs Helix</a></td><td>10</td><td>NA</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+<tr><td><a href="#phantom">Phantom</a></td><td>NA</td><td>NA</td><td>DAG</td><td>greedy selection algorithm</td><td>△</td></tr>
+<tr><td><a href="#radix">Radix</a></td><td>3.5</td><td>5</td><td>chain</td><td>logical clock</td><td>O</td></tr>
+<tr><td><a href="#snowflake">Snowflake</a></td><td>1300</td><td>4</td><td>DAG</td><td>Avalanche</td><td>△</td></tr>
+<tr><td><a href="#spectre">Spectre</a></td><td>NA</td><td>1 ~ 10</td><td>DAG</td><td>block voting algorithm</td><td>X</td></tr>
+<tr><td><a href="#stellar">Stellar</a></td><td>1K ~ 10K</td><td>2 ~ 5</td><td>chain</td><td>Stellar Consensus</td><td>O</td></tr>
+<tr><td><a href="#tendermint">Tendermint</a></td><td>NA</td><td>1 ~ 3</td><td>chain</td><td>PBFT</td><td>△</td></tr>
+<tr><td><a href="#tendermint">Thunderella</a></td><td>NA</td><td>1.5</td><td>chain</td><td>BFT + longest chain</td><td>△</td></tr>
+<tr><td><a href="#ton">TON</a></td><td>M+</td><td>5</td><td>DAG</td><td>BFT</td><td>O</td></tr>
+<tr><td><a href="#vite">Vite</a></td><td>NA</td><td>10</td><td>DAG</td><td>longest chain</td><td>O</td></tr>
+<tr><td><a href="#zilliqa">Zilliqa</a></td><td>3K</td><td>10 ~ 20</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+</tbody></table>
+<a class="header" href="#dexon" id="dexon"><h2>DEXON</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>1M+</td><td>1</td><td>DAG</td><td>DEXON Byzantine agreement + Total ordering</td><td>O</td></tr>
+</tbody></table>
+<p>DEXON is a scalable, low-latency, energy efficient and inter-chain operable DApp ecosystem. DEXON uses an efficient Byzantine agreement as its main consensus algorithm, of which throughput can scale linearly with the number of nodes while latency remains nearly constant. With the adoption of verifiable random function, DEXON can provide high performance while keeping the network decentralized (~ 100K nodes). With such high throughput and low latency, practical DApp can finally be developed and widely used.</p>
+<a class="header" href="#algorand" id="algorand"><h2>Algorand</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>875</td><td>&lt; 60</td><td>chain</td><td>Byzantine agreement</td><td>△</td></tr>
+</tbody></table>
+<p>Algorand is designed for a large population ( ~ 500K nodes). They use a verifiable random function to protect nodes from DDoS attack, and it is the lottery that decides who have the right to propose a block or to vote for each round.</p>
+<p>The consensus of Algorand is based on Byzantine agreement among samples from the whole set of nodes. This is the reason why Algorand can only tolerate less than one-third of the total number of nodes. For example, if it sets 1/5 as the maximum ratio of Byzantine nodes among all nodes, the ratio of Byzantine nodes in samples can be bounded by 1/3 with high probability.</p>
+<p>They use gossip mechanism that costs a latency of <img src="https://latex.codecogs.com/svg.latex?O(log(n))*T_{network}" /> for each message, which means its confirmation time becomes longer when the number of nodes increases and scatters around the world. With this limitation, the confirmation time will be around one minute if the number of nodes is expected to be 500K. Another factor that will affect the confirmation time is Byzantine behavior. If a Byzantine node wins the lottery and becomes a leader, the process of the Byzantine agreement will need more round to converge. On the other hand, DEXON's confirmation time is not affected by Byzantine behavior as long as the number of Byzantine nodes is less than one-third of total nodes.</p>
+<p>If Algorand wants to increase its throughput, it must increase block size. However, increasing block size causes a longer network delay, increasing the confirmation time. This means Algorand is lack of scalability. On the other hand, DEXON increases throughput by increasing the number of nodes without affecting the confirmation time.</p>
+<a class="header" href="#bitcoin" id="bitcoin"><h2>Bitcoin</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>7</td><td>3600</td><td>chain</td><td>longest chain rule</td><td>X</td></tr>
+</tbody></table>
+<p>Bitcoin is the first cryptocurrency that starts the era of blockchain. It is the most well-known and widely used cryptocurrency. However, it is infamous for its long confirmation time, low TPS and high transaction fee. DEXON solves all of them and at the same time provides DApp functionality, which Bitcoin does not have.</p>
+<a class="header" href="#cardano" id="cardano"><h2>Cardano</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>250</td><td>300</td><td>chain</td><td>Ouroboros</td><td>O</td></tr>
+</tbody></table>
+<p>Cardano is the first project that provides a concrete mathematical proof on the security of PoS blockchain. Besides PoS, they also propose other promising ideas such as unbiased randomness with the commit-reveal scheme and using Nash Equilibrium to prevent selfish mining attack. However, its chain-based structure naturally limits its throughput, since chain-based structure can only process block linearly, and can be proved that it can not scale.</p>
+<p>Another problem in Cardano consensus is that it highly depends on time synchronization. If some honest nodes are desynchronized (for example, NTP service hijack by an attacker), they do not know when is the starting time of a slot and will be treated as fail-stop nodes. They claimed desynchronized nodes could be corrected by some method introduced in the future, but it is not implemented yet.</p>
+<a class="header" href="#conflux" id="conflux"><h2>Conflux</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>6400</td><td>270</td><td>DAG</td><td>GHOST</td><td>△</td></tr>
+</tbody></table>
+<p>Conflux is a graph-based PoW consensus based on GHOST protocol that fixed the Phantom blockchain. Conflux uses GHOST protocol to select the main chain in a graph and produces a total ordering of the graph by the main chain. Thus, it is generalized Bitcoin consensus, and they also point out that the bias problem in Phantom blockchain.</p>
+<p>However, the latency is bounded by its PoW mechanism. It needs to wait for a period to select the correct and consistent main chain with high probability. Even if it switched to a PoS mechanism, the latency would still be unacceptably long since the GHOST protocol is a kind of longest chain rule consensus.</p>
+<a class="header" href="#dfinity" id="dfinity"><h2>Dfinity</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>500 ~ 1000</td><td>5 ~ 10</td><td>chain</td><td>Dfinity</td><td>O</td></tr>
+</tbody></table>
+<p>Dfinity is a permissioned blockchain and is designed for a large population (around 10K of nodes). Dfinity contains a randomness beacon which generates new randomness by a VRF (verifiable random function) with information from a new confirmed block. They use the randomness to select a leader and electors for a round. By hypergeometric distribution, Dfinity only samples hundred of nodes to notary a block instead of using all nodes, and this is correct with high probability. However, this reduces the tolerance ability to Byzantine nodes. For example, to achieve the majority of nodes is non-Byzantine with probability less than <img src="https://latex.codecogs.com/svg.latex?2^{-40}">, it needs to sample at least 423 nodes from 10K nodes with maximum 1/3 Byzantine nodes.
+However, Dfinity is chain-based, so its throughput is limited.</p>
+<a class="header" href="#eos" id="eos"><h2>EOS</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>3K</td><td>165</td><td>chain</td><td>longest chain &amp; Byzantine fault tolerance</td><td>O</td></tr>
+</tbody></table>
+<p>EOS reaches high throughput and low latency. They have 21 so-called &quot;supernodes,&quot; which are considered not decentralized. Also, at the time of writing, its Byzantine fault tolerance consensus is not implemented yet, so the confirmation time is about 165 seconds, not 1 or 2 seconds as they claimed.</p>
+<a class="header" href="#ethereum" id="ethereum"><h2>Ethereum</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>20</td><td>360</td><td>chain</td><td>longest chain</td><td>O</td></tr>
+</tbody></table>
+<p>Ethereum is the first blockchain system that has a complete DApp ecosystem. It has a throughput higher and latency lower than Bitcoin, but still not enough for daily usages such as payment or gaming. A popular DApp can block the whole system, causing high transaction fee. Also, the latency now (several minutes) is not acceptable for real-time applications.</p>
+<a class="header" href="#hashgraph" id="hashgraph"><h2>Hashgraph</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>200K</td><td>20</td><td>DAG</td><td>Hedera</td><td>O</td></tr>
+</tbody></table>
+<p>The consensus of Hashgraph is adapted Byzantine agreement on a graph, on the other hand, the core of DEXON consensus is based on total ordering algorithm. Their round-based structure costs a latency of <img src="https://latex.codecogs.com/svg.latex?O(log(n))*T_{network}" /> for each round, which means its confirmation time becomes longer when the number of nodes increases. With this limitation, it cannot be fully decentralized, or the confirmation time can be minutes. Also, the liveness is not guaranteed in Hashgraph. Only correctness proof is provided. With Byzantine nodes presented in its network, it is possible that Hashgraph does not output any block. Meanwhile, DEXON's confirmation time remain constant when the number of nodes increases.</p>
+<a class="header" href="#hyperledger" id="hyperledger"><h2>Hyperledger</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>4K</td><td>&lt; 1</td><td>chain</td><td>pluggable</td><td>O</td></tr>
+</tbody></table>
+<p>Hyperledger (specifically, Hyperledger Fabric) is a distributed ledger designed for enterprise use. It should be permissioned, low-latency, high-throughput and provides private transaction functionalities. Its consensus is modularized and pluggable. It can choose among consensus engines/algorithms such as Tendermint, PBFT, Kafka ordering or RAFT.</p>
+<p>It is much easier to address consensus problem in a permissioned consortium settings with high throughput and low latency because the assumption of the environment is: the number of nodes is fixed, each identity is known, the goal of all nodes is the same, and the network environment is stable and fast, but the node does not fully trust to each other. It does fit for enterprises to use such settings, while DEXON aims to be more open and decentralized, providing high throughput and low latency at the same time.</p>
+<a class="header" href="#iota" id="iota"><h2>IOTA</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>500 ~ 800</td><td>&gt; 180</td><td>DAG</td><td>longest chain rule</td><td>X</td></tr>
+</tbody></table>
+<p>IOTA follows the longest chain rule on a graph: a node randomly chooses and verifies two previous blocks and attaches its block to them. A block is confirmed if enough number of blocks followed it and the length of the connected chain is the longest.
+However, the rule is inefficient because the confirmation time is not guaranteed by a specific bound. Moreover, a block might be invalid if it is attached to a block that contains conflict transactions. That block has to be re-attached to other blocks. This causes a very long confirmation time. Furthermore, IOTA does not support smart contract due to the lack of total ordering among all blocks.</p>
+<a class="header" href="#kadena" id="kadena"><h2>Kadena</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>10K</td><td>20</td><td>DAG</td><td>Chainweb</td><td>O</td></tr>
+</tbody></table>
+<p>Kadena aims to solve the scalability issue of blockchain. It uses Chainweb to process transactions in parallel. Each chain includes others' block headers, forming a DAG similar to DEXON blocklattice. To perform cross-chain transactions, one has to provide Merkle proof to smart contract, and assets will be deleted from source chain and re-created on destination chain. Kadena also analyzes peer header relationships and uses specifically designed graphs that have a small diameter and large order to achieve low latency and high throughput.</p>
+<p>The latency of Chainweb is <img src="https://latex.codecogs.com/svg.latex?O(r)"/>, where <img src="https://latex.codecogs.com/svg.latex?r"/> is the diameter of a graph. When it scales up and increases the number of chains, the diameter of the graph also becomes larger, causing the latency to increase. Another problem is when proposing a block on a chain. The block has to include its peer's block headers. This means block proposing is blocking and not efficient, while in DEXON, a block actively acks any other newly proposed blocks, achieving fast non-blocking block proposing.</p>
+<a class="header" href="#nano" id="nano"><h2>NANO</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>7000</td><td>1</td><td>DAG</td><td>DPoS voting</td><td>X</td></tr>
+</tbody></table>
+<p>NANO is the first project that introduces blocklattice as their data structure. Each account has its blockchain, and a transaction it proposed is recorded on its blockchain. When a blockchain fork happens, NANO starts DPoS voting to resolve it.</p>
+<p>DEXON's blocklattice is entirely different from NANO's. In DEXON, instead of every account having its blockchain, each validator has a blockchain. This could save a lot of memory space. In our blocklattice, each vertex is a block, while in NANO, each vertex is half of a transaction (send tx or recv tx). From our viewpoint, their blocklattice is more like &quot;tx-lattice,&quot; not blocklattice, and we consider blocklattice a general term that can be used by other projects, just like blockchain, since it is just a type of DAG.</p>
+<p>DEXON's consensus algorithm is also completely different from NANO's. We use total ordering algorithm to decide an order of blocks and transactions, while NANO does not have consensus on order of transactions. Without ordering transactions, it can not support smart contract. Another problem is its DPoS to resolve fork. The voting process NANO used to resolve fork is mysterious. In its whitepaper, there is no detail about the voting process. The only thing we know is a majority voting with 4 rounds. Without further detail and security proof, we find it hard to believe that NANO is secure. Also, NANO needs PoW to prevent spam (penny) attack, increasing the cost of attack but also limiting its throughput and increasing its latency.</p>
+<a class="header" href="#omniledger" id="omniledger"><h2>Omniledger</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>6K</td><td>10</td><td>chain</td><td>ByzCoinX</td><td>△</td></tr>
+</tbody></table>
+<p>Omniledger aims to solve scalability problem without sacrificing security and decentralization. Its primary approach is sharding, which allows the throughput to scale linearly with the number of nodes. Omliledger also provides nice features such as ledger pruning, cross-shard transaction, and trust-but-verify validation.</p>
+<p>The problem of Omniledger is that its latency could be large in a fully decentralized setting. The reason is that it uses ByzCoinX (which is an optimization of PBFT-like consensus algorithm) for intra-shard consensus and Atomix (DB-like atomic broadcast) for inter-shard transactions. This means the group size in a shard for communication cannot be too large, or the communication cost and latency will be large. To increase the number of nodes with limited shard size, the number of shards will increase, and the needs for cross-shard transactions will also increase. With atomic broadcast, a cross-shard transaction has to wait for every involved shard to be confirmed, and even a single shard failed will cause the transaction to fail. In DEXON, transactions only need to enter one shard and will be output immediately.</p>
+<p>Omniledger also sacrifices some of the security. According to hypergeometric distribution, if the sampled Byzantine nodes in a shard must be less than one third, one can only tolerate Byzantine nodes much less than one third in the whole network, or sampling cannot be successful with high probability. This is why the number of Byzantine nodes Omniledger can tolerate is one fourth, not one-third of total nodes.</p>
+<a class="header" href="#ontology" id="ontology"><h2>Ontology</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>5K</td><td>20</td><td>DAG</td><td>Ontorand</td><td>O</td></tr>
+</tbody></table>
+<p>Ontology consensus algorithm Ontorand uses randomness from the last block to generate new block proposer and validators. Its Byzantine agreement voting process (although not detailed enough) looks extremely similar to Algorand. Its verifiable random function which generates randomness in a block is exactly the same as Algorand. Without any citation and improvement from Algorand, Ontorand is nothing but a copycat. For the comparison to Algorand, please reference <a href="#algorand">here</a>.</p>
+<a class="header" href="#orbs-helix" id="orbs-helix"><h2>Orbs Helix</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>10</td><td>NA</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+</tbody></table>
+<p>The top priority of Helix is fairness. It uses VRF (verifiable random function) as an unbiased random source to elect committee and leader. When running its core consensus (PBFT), all transactions are encrypted by users using threshold encryption. This means there is no way a node can censor or prioritize any transaction. After consensus is reached, the content of a block is then decrypted, and transactions are executed. Thus, the order of transactions cannot be biased, achieving fairness. Helix also uses VRF to decide which transaction can be put into a block. Because nodes cannot decide which transactions to be put into a block, transaction fees can be set to a constant.</p>
+<p>Unfortunately, fairness does not come without cost. Threshold encryption not only increases computational cost but needs an extra phase of decryption. This increase the latency. What's worse, its chain structure is not scalable. To solve the scalability problem, Orbs introduces &quot;intelligent sharding&quot; (which we did not find any technical detail). A recent simulation shows that Helix has only 10 TPS (with unknown latency). With 100 shards, it can reach 1000 TPS, while DEXON has 1M+ TPS with a hundred nodes in one shard.</p>
+<a class="header" href="#phantom" id="phantom"><h2>Phantom</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>NA</td><td>DAG</td><td>greedy selection algorithm</td><td>△</td></tr>
+</tbody></table>
+<p>Phantom is a DAG-based blockchain which is generalized from Bitcoin's longest chain rule on a chain to a DAG. Phantom is a proposal for Spectre, and they proposed a greedy algorithm called ghostDAG protocol to achieve total ordering. However, they did not prove the correctness and liveness of their algorithm or provide the simulation results about Phantom in the distributed setting. Another liveness attack on Phantom was individually proposed by the work from Li et al. and the work from Kiayias and Panagiotakos. They also claimed they would try to combine Phantom and Spectre in the future. We will update the information if they provide new and correct results.</p>
+<p>On the other hand, the total ordering in DEXON consensus is guaranteed. Moreover, the correctness and liveness of DEXON consensus are both proved.</p>
+<a class="header" href="#radix" id="radix"><h2>Radix</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>3.5</td><td>5</td><td>chain</td><td>logical clock</td><td>O</td></tr>
+</tbody></table>
+<p>Radix uses sharding technique to increase throughput. In order to reach consensus among different shards, a transaction needs to be gossipped and be validated by many nodes. Each node provides its local logical clock and appends its value to the transaction. Nodes can then use this logical clock vector to decide partial ordering between two conflict transactions. In case of a concurrent set, a node finds other transactions from its local storage or from its peer trying to decide partial ordering of transactions.</p>
+<p>There is a fundamental problem in Radix: a partial ordering can never become total ordering without consensus algorithm. Some partial ordering of transactions in Radix can be decided by vector timestamps, but no matter how many transactions are involved, there always exists some cases that concurrent set can never be resolved. In other words, orders of some transactions may never be decided and will not be output by the system. What's worse, when a network is shortly partitioned or has a long delay, nodes can have different local views. Since a node decides an ordering from other transactions from its local view, this will cause different ordering among nodes, resulting in a fork, and there is no consensus algorithm in Radix to address this issue.</p>
+<p>To sum up, Radix does not have consensus. It can be used in private / permissioned settings but will not work in a real network environment.</p>
+<a class="header" href="#snowflake" id="snowflake"><h2>Snowflake</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>1300</td><td>4</td><td>DAG</td><td>Avalanche</td><td>△</td></tr>
+</tbody></table>
+<p>Snowflake consensus starts from a simple coloring method, adds additional counters and rules, and finally ends up a provably probabilistic secure consensus algorithm, Avalanche. All nodes converge to the same color, which means that they will agree on the same transaction set when conflict happens.</p>
+<p>In order to resolve conflict transactions, nodes need to execute Avalanche algorithm on every transaction in a conflict set. So an attacker can spam the system with a large number of conflict transactions, resulting in the system to execute Avalanche algorithm hundreds of thousands of times, and the latency will grow significantly. DEXON will not suffer from such an attack. After total order being decided, the first transaction in the conflict set will be executed, while other conflict transactions are ignored.</p>
+<a class="header" href="#spectre" id="spectre"><h2>Spectre</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>1 ~ 10</td><td>DAG</td><td>block voting algorithm</td><td>X</td></tr>
+</tbody></table>
+<p>Spectre is a DAG-based digital ledger system that uses recursive block voting to decide which conflict block should be finalized. This consensus algorithm allows participants to propose block arbitrarily fast, which means its scalability and latency is bounded by the network. However, its lack of total ordering of blocks makes it impossible to execute a smart contract. That is the reason why they propose &quot;Phantom,&quot; a consensus that is also DAG-based but with total ordering properties. We also compare DEXON to <a href="#phantom">Phantom</a>.</p>
+<a class="header" href="#stellar" id="stellar"><h2>Stellar</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>1K ~ 10K</td><td>2 ~ 5</td><td>chain</td><td>Stellar Consensus</td><td>O</td></tr>
+</tbody></table>
+<p>Stellar uses a generalized version of traditional Byzantine agreement protocol, which they called &quot;federated Byzantine agreement.&quot; This consensus algorithm requires participants to choose their own quorum slices. If quorum intersection is satisfied, it is proved that all intact participants will reach consensus.</p>
+<p>The only concern about this kind of consensus is that whether a node can remain intact (not affected by Byzantine nodes) depends on the choice of its quorum slices. In order to have a secure configuration with fast response and stable service, it is better for a node to choose nodes set up by reliable companies or banks as quorum slices, which may lead to semi-centralization.</p>
+<a class="header" href="#tendermint" id="tendermint"><h2>Tendermint</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>1 ~ 3</td><td>chain</td><td>PBFT</td><td>△</td></tr>
+</tbody></table>
+<p>Tendermint uses PBFT as their consensus algorithm. Although PBFT has low latency in permissioned settings, it can not be permissionless, because PBFT has a heavy communication cost of <img src="https://latex.codecogs.com/svg.latex?O(b*n^2)" /> due to its two-phase commit. This means when the number of nodes increases, the required bandwidth of network will also increase quadratically, limiting the number nodes. DEXON uses cryptographic sortition sharding technique and configurable ack frequency to reduce the communication cost to <img src="https://latex.codecogs.com/svg.latex?O(f*n*log(n))" />.</p>
+<a class="header" href="#thunderella" id="thunderella"><h2>Thunderella</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>1.5</td><td>chain</td><td>BFT + longest chain</td><td>△</td></tr>
+</tbody></table>
+<p>Thunderella combines two different consensus algorithms and tries to achieve high security with good performance. With less than one-fourth of the committee are Byzantine nodes, it can achieve a low latency with BFT algorithm. With more than one fourth, it can fall back to any blockchain system that can tolerate less than <img src="https://latex.codecogs.com/svg.latex?\frac{1}{2}n" /> Byzantine nodes.</p>
+<p>If more than one-fourth of the committee is Byzantine node, Thunderella becomes as slow as a blockchain, while DEXON remains its low latency. Also, Thunderella is a chain-based system, and it can not scale.</p>
+<a class="header" href="#ton" id="ton"><h2>TON</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>M+</td><td>5</td><td>DAG</td><td>BFT</td><td>O</td></tr>
+</tbody></table>
+<p>TON (Telegram Open Network) is a blockchain system featuring high throughput with short confirmation time. To achieve this, they propose a new point of view called &quot;Infinite Sharding Paradigm,&quot; which tries to push sharding to its extreme. In TON, there is a masterchain for general state finalization. Under a masterchain, there are several workchains to perform specific tasks for different cryptocurrencies and services. If a workchain is overloaded, under that it can have several shardchains to increase throughput. In each chain, validators run a BFT-based consensus algorithm with a DPoS mechanism to propose blocks. With this sharding design, TON claims it can reach several millions of TPS with 5 seconds latency.</p>
+<p>One significant difference between TON and DEXON is that TON needs to run BFT consensus algorithm on several different levels of the chains. For masterchain, it requires all validators to participate in BFT algorithm. Since BFT algorithm is typically not scalable, we can only have a limited number of nodes to participate in masterchain. This can be considered a bit centralized. In DEXON, we do not require all nodes to run a single BFT algorithm; thus we can have hundreds of thousands of nodes participating in our system.</p>
+<p>TON also has a finalization problem. It allows validators to modify invalid blocks without forking since it is more efficient and will only affect some history blocks. However, this design also allows an attacker to modify arbitrary history blocks if they can compromise the validator set. Typically in a system with BFT finalization, it should be impossible to modify history even if the current validator set is compromised. Even in traditional PoW scheme, launching a 51% attack and modifying history blocks has a much higher cost with low probability to success. This design may cause security issue in TON.</p>
+<a class="header" href="#vite" id="vite"><h2>Vite</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>10</td><td>DAG</td><td>longest chain</td><td>O</td></tr>
+</tbody></table>
+<p>Vite mainly fixes NANO's problem we mentioned in our <a href="#nano">comparison to NANO</a>. It uses the same blocklattice with NANO, but additionally adds a new consensus mechanism (HDPoS) to construct a snapshot chain. This not only solves security issues in NANO but also orders transactions, making it capable to run smart contract. What's more, Vite inherits NANO's advantages, including nearly instant transactions with high TPS.</p>
+<p>One of the difficult challenges to use a DAG structure is to decide the ordering of transactions. Vite has a global consensus group to run a consensus algorithm to create snapshot chain. This algorithm is important because it is the key to improve NANO's disadvantages on security and lack of total ordering. Unfortunately, we can not find any detail about the algorithm in their paper and do not know how transactions on blocklattice are picked and put into snapshot chain. Is this critical process secure and fair? To address this challenges, DEXON develops total ordering algorithm to compact blocklattice into compaction chain. This algorithm is provably secure and reasonably fair.</p>
+<a class="header" href="#zilliqa" id="zilliqa"><h2>Zilliqa</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>3K</td><td>10 ~ 20</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+</tbody></table>
+<p>Zilliqa is an optimized PBFT. It uses EC-Schnorr multi-signature to aggregate signatures from nodes. This reduces communication cost from <img src="https://latex.codecogs.com/svg.latex?O(n^2)" /> to <img src="https://latex.codecogs.com/svg.latex?O(n)" />. To address limited throughput in a chain-based system, Zilliqa uses sharding technique to process transactions in parallel. A specific shard collects micro blocks from normal shards to produce final blocks.</p>
+<p>There are several drawbacks in Zilliqa. First of all, multi-signature aggregation is computationally costly. This is not a problem with ten-second finalization time, but in sub-second finalization time, it is not feasible with a large number of nodes in a shard. Second, Zilliqa uses a specific shard running consensus protocol to combine micro blocks from other shards. This doubles the latency. In DEXON, there is no specific shard to run another redundant consensus protocol. DEXON sharding mechanism is symmetric. We use consensus timestamp computed by total ordering algorithm to form compaction chain, which nodes in each shard can compute by themselves when receiving finalized blocks from other shards.</p>
+<a class="header" href="#dexon-papers" id="dexon-papers"><h1>DEXON papers</h1></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

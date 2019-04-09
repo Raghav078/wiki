@@ -1,0 +1,408 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Blockchain Comparision - </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="Getting-Started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li><a href="Overview.html"><strong aria-hidden="true">1.1.</strong> Overview</a></li><li><a href="how-to-use-this-documentation.html"><strong aria-hidden="true">1.2.</strong> How to use this documentation</a></li></ol></li><li><a href="Network-Access-Guide.html"><strong aria-hidden="true">2.</strong> Network Access Guide</a></li><li><ol class="section"><li><a href="Create-Wallet.html"><strong aria-hidden="true">2.1.</strong> Create Wallet</a></li></ol></li><li><a href="DApp-Dev-Guide.html"><strong aria-hidden="true">3.</strong> DApp Development Guide</a></li><li><ol class="section"><li><a href="Dapp-Development.html"><strong aria-hidden="true">3.1.</strong> DApp Development</a></li><li><a href="Access-to-Testnet.html"><strong aria-hidden="true">3.2.</strong> Access to Testnet</a></li></ol></li><li><a href="System-Spec.html"><strong aria-hidden="true">4.</strong> System Spec</a></li><li><ol class="section"><li><a href="accounts.html"><strong aria-hidden="true">4.1.</strong> Accounts</a></li><li><a href="transaction.html"><strong aria-hidden="true">4.2.</strong> Transaction</a></li><li><a href="block.html"><strong aria-hidden="true">4.3.</strong> Block</a></li></ol></li><li><a href="API.html"><strong aria-hidden="true">5.</strong> API</a></li><li><ol class="section"><li><a href="rpc-api.html"><strong aria-hidden="true">5.1.</strong> JSON-RPC API</a></li><li><a href="websocket-api.html"><strong aria-hidden="true">5.2.</strong> WebSocket API</a></li><li><a href="data-api.html"><strong aria-hidden="true">5.3.</strong> DATA API</a></li></ol></li><li><a href="Node-OP-Guide.html"><strong aria-hidden="true">6.</strong> Node Operator Guide</a></li><li><ol class="section"><li><a href="Running--a-BP-node-for-Testnet.html"><strong aria-hidden="true">6.1.</strong> Running a testnet BP node</a></li><li><a href="DEXON-BP-Node-Operation-Guide.html"><strong aria-hidden="true">6.2.</strong> Running a BP node</a></li><li><a href="DEXON-RPC-Node-Operation-Guide.html"><strong aria-hidden="true">6.3.</strong> Running a RPC node</a></li><li><a href="Rule-for-the-DEXON-node-set.html"><strong aria-hidden="true">6.4.</strong> Rule for the DEXON node set</a></li></ol></li><li><a href="Fullnode-Dev-Guide.html"><strong aria-hidden="true">7.</strong> Fullnode Development Guide</a></li><li><ol class="section"><li><a href="Fullnode-Development.html"><strong aria-hidden="true">7.1.</strong> Contribute to DEXON Fullnode</a></li><li><a href="List-of-Repositories.html"><strong aria-hidden="true">7.2.</strong> List of Repositories</a></li></ol></li><li><a href="Tech-Docs.html"><strong aria-hidden="true">8.</strong> Technical Documentations</a></li><li><ol class="section"><li><a href="Consensus-Algo-v2-Spec.html"><strong aria-hidden="true">8.1.</strong> Consensus Algorithm V2 Specification</a></li><li><a href="Selection-of-the-notary-set-size.html"><strong aria-hidden="true">8.2.</strong> Selection of notary set size</a></li><li><a href="DKG-TSIG-Protocol.html"><strong aria-hidden="true">8.3.</strong> DKG-Tsig Protocol</a></li><li><a href="On-Chain-Random-Oracle.html"><strong aria-hidden="true">8.4.</strong> On-chain Random Oracle</a></li><li><a href="DEXON-Cryptoeconomics.html"><strong aria-hidden="true">8.5.</strong> DEXON Cryptoeconomics</a></li><li><a href="Governance-Contract-Interface.html"><strong aria-hidden="true">8.6.</strong> Governance Contract Interface</a></li><li><a href="Configuration-Change.html"><strong aria-hidden="true">8.7.</strong> Configuration Change</a></li></ol></li><li><a href="Resource.html"><strong aria-hidden="true">9.</strong> Resource</a></li><li><ol class="section"><li><a href="Blockchain-Comparison.html" class="active"><strong aria-hidden="true">9.1.</strong> Blockchain Comparision</a></li><li><a href="DEXON-PAPERS.html"><strong aria-hidden="true">9.2.</strong> DEXON papers</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title"></h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#dexon-comparison-to-other-blockchain" id="dexon-comparison-to-other-blockchain"><h1>DEXON Comparison to Other Blockchain</h1></a>
+<a class="header" href="#introduction" id="introduction"><h3>Introduction</h3></a>
+<p>This document explains how DEXON is different compared to other blockchain infrastructures. We do our best to explain the main differences, but still, we have the following principles:</p>
+<ol>
+<li>We will not dive into details of other projects. We only focus on the differences. For the details, please refer to their websites and whitepapers.</li>
+<li>The comparison is based on our current understanding, and projects can be updated frequently. We will update this document if necessary.</li>
+</ol>
+<a class="header" href="#definition" id="definition"><h3>Definition</h3></a>
+<ul>
+<li>Node in this document is a validator or a full node in the network.</li>
+<li><img src="https://latex.codecogs.com/svg.latex?T_{network}" />: network delay between nodes</li>
+<li><img src="https://latex.codecogs.com/svg.latex?n" />: number of nodes</li>
+<li><img src="https://latex.codecogs.com/svg.latex?b" />: number of blocks to be confirmed</li>
+<li><img src="https://latex.codecogs.com/svg.latex?f" />: ack frequency</li>
+<li>For smart contract column:
+<ul>
+<li>O: Supprted</li>
+<li>X: Not supported</li>
+<li>△: Not supported for now, but is able to support</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#table-of-contents" id="table-of-contents"><h3>Table of Contents</h3></a>
+<table><thead><tr><th> Project </th><th> Throughput (TPS) </th><th> Latency (seconds) </th><th> Data Structure </th><th> Consensus </th><th> Smart Contract </th></tr></thead><tbody>
+<tr><td><a href="#dexon">DEXON</a></td><td>1M+</td><td>1</td><td>DAG</td><td>Byzantine agreement + Total ordering</td><td>O</td></tr>
+<tr><td><a href="#algorand">Algorand</a></td><td>875</td><td>&lt; 60</td><td>chain</td><td>Byzantine agreement</td><td>△</td></tr>
+<tr><td><a href="#bitcoin">Bitcoin</a></td><td>7</td><td>3600</td><td>chain</td><td>longest chain rule</td><td>X</td></tr>
+<tr><td><a href="#cardano">Cardano</a></td><td>250</td><td>300</td><td>chain</td><td>Ouroboros</td><td>O</td></tr>
+<tr><td><a href="#conflux">Conflux</a></td><td>6400</td><td>270</td><td>DAG</td><td>GHOST</td><td>△</td></tr>
+<tr><td><a href="#dfinity">Dfinity</a></td><td>500 ~ 1000</td><td>5 ~ 10</td><td>chain</td><td>Dfinity</td><td>O</td></tr>
+<tr><td><a href="#eos">EOS</a></td><td>3K</td><td>165</td><td>chain</td><td>longest chain &amp; Byzantine fault tolerance</td><td>O</td></tr>
+<tr><td><a href="#ethereum">Ethereum</a></td><td>20</td><td>360</td><td>chain</td><td>longest chain</td><td>O</td></tr>
+<tr><td><a href="#hashgraph">Hashgraph</a></td><td>200K</td><td>20</td><td>DAG</td><td>Hedera</td><td>O</td></tr>
+<tr><td><a href="#hyperledger">Hyperledger</a></td><td>4K</td><td>&lt; 1</td><td>chain</td><td>pluggable</td><td>O</td></tr>
+<tr><td><a href="#iota">IOTA</a></td><td>500 ~ 800</td><td>&gt; 180</td><td>DAG</td><td>longest chain rule</td><td>X</td></tr>
+<tr><td><a href="#kadena">Kadena</a></td><td>10K</td><td>20</td><td>DAG</td><td>Chainweb</td><td>O</td></tr>
+<tr><td><a href="#nano">NANO</a></td><td>7000</td><td>1</td><td>DAG</td><td>DPoS voting</td><td>X</td></tr>
+<tr><td><a href="#omniledger">Omniledger</a></td><td>6K</td><td>10</td><td>chain</td><td>ByzCoinX</td><td>△</td></tr>
+<tr><td><a href="#ontology">Ontology</a></td><td>5K</td><td>20</td><td>DAG</td><td>Ontorand</td><td>O</td></tr>
+<tr><td><a href="#orbs-helix">Orbs Helix</a></td><td>10</td><td>NA</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+<tr><td><a href="#phantom">Phantom</a></td><td>NA</td><td>NA</td><td>DAG</td><td>greedy selection algorithm</td><td>△</td></tr>
+<tr><td><a href="#radix">Radix</a></td><td>3.5</td><td>5</td><td>chain</td><td>logical clock</td><td>O</td></tr>
+<tr><td><a href="#snowflake">Snowflake</a></td><td>1300</td><td>4</td><td>DAG</td><td>Avalanche</td><td>△</td></tr>
+<tr><td><a href="#spectre">Spectre</a></td><td>NA</td><td>1 ~ 10</td><td>DAG</td><td>block voting algorithm</td><td>X</td></tr>
+<tr><td><a href="#stellar">Stellar</a></td><td>1K ~ 10K</td><td>2 ~ 5</td><td>chain</td><td>Stellar Consensus</td><td>O</td></tr>
+<tr><td><a href="#tendermint">Tendermint</a></td><td>NA</td><td>1 ~ 3</td><td>chain</td><td>PBFT</td><td>△</td></tr>
+<tr><td><a href="#tendermint">Thunderella</a></td><td>NA</td><td>1.5</td><td>chain</td><td>BFT + longest chain</td><td>△</td></tr>
+<tr><td><a href="#ton">TON</a></td><td>M+</td><td>5</td><td>DAG</td><td>BFT</td><td>O</td></tr>
+<tr><td><a href="#vite">Vite</a></td><td>NA</td><td>10</td><td>DAG</td><td>longest chain</td><td>O</td></tr>
+<tr><td><a href="#zilliqa">Zilliqa</a></td><td>3K</td><td>10 ~ 20</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+</tbody></table>
+<a class="header" href="#dexon" id="dexon"><h2>DEXON</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>1M+</td><td>1</td><td>DAG</td><td>DEXON Byzantine agreement + Total ordering</td><td>O</td></tr>
+</tbody></table>
+<p>DEXON is a scalable, low-latency, energy efficient and inter-chain operable DApp ecosystem. DEXON uses an efficient Byzantine agreement as its main consensus algorithm, of which throughput can scale linearly with the number of nodes while latency remains nearly constant. With the adoption of verifiable random function, DEXON can provide high performance while keeping the network decentralized (~ 100K nodes). With such high throughput and low latency, practical DApp can finally be developed and widely used.</p>
+<a class="header" href="#algorand" id="algorand"><h2>Algorand</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>875</td><td>&lt; 60</td><td>chain</td><td>Byzantine agreement</td><td>△</td></tr>
+</tbody></table>
+<p>Algorand is designed for a large population ( ~ 500K nodes). They use a verifiable random function to protect nodes from DDoS attack, and it is the lottery that decides who have the right to propose a block or to vote for each round.</p>
+<p>The consensus of Algorand is based on Byzantine agreement among samples from the whole set of nodes. This is the reason why Algorand can only tolerate less than one-third of the total number of nodes. For example, if it sets 1/5 as the maximum ratio of Byzantine nodes among all nodes, the ratio of Byzantine nodes in samples can be bounded by 1/3 with high probability.</p>
+<p>They use gossip mechanism that costs a latency of <img src="https://latex.codecogs.com/svg.latex?O(log(n))*T_{network}" /> for each message, which means its confirmation time becomes longer when the number of nodes increases and scatters around the world. With this limitation, the confirmation time will be around one minute if the number of nodes is expected to be 500K. Another factor that will affect the confirmation time is Byzantine behavior. If a Byzantine node wins the lottery and becomes a leader, the process of the Byzantine agreement will need more round to converge. On the other hand, DEXON's confirmation time is not affected by Byzantine behavior as long as the number of Byzantine nodes is less than one-third of total nodes.</p>
+<p>If Algorand wants to increase its throughput, it must increase block size. However, increasing block size causes a longer network delay, increasing the confirmation time. This means Algorand is lack of scalability. On the other hand, DEXON increases throughput by increasing the number of nodes without affecting the confirmation time.</p>
+<a class="header" href="#bitcoin" id="bitcoin"><h2>Bitcoin</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>7</td><td>3600</td><td>chain</td><td>longest chain rule</td><td>X</td></tr>
+</tbody></table>
+<p>Bitcoin is the first cryptocurrency that starts the era of blockchain. It is the most well-known and widely used cryptocurrency. However, it is infamous for its long confirmation time, low TPS and high transaction fee. DEXON solves all of them and at the same time provides DApp functionality, which Bitcoin does not have.</p>
+<a class="header" href="#cardano" id="cardano"><h2>Cardano</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>250</td><td>300</td><td>chain</td><td>Ouroboros</td><td>O</td></tr>
+</tbody></table>
+<p>Cardano is the first project that provides a concrete mathematical proof on the security of PoS blockchain. Besides PoS, they also propose other promising ideas such as unbiased randomness with the commit-reveal scheme and using Nash Equilibrium to prevent selfish mining attack. However, its chain-based structure naturally limits its throughput, since chain-based structure can only process block linearly, and can be proved that it can not scale.</p>
+<p>Another problem in Cardano consensus is that it highly depends on time synchronization. If some honest nodes are desynchronized (for example, NTP service hijack by an attacker), they do not know when is the starting time of a slot and will be treated as fail-stop nodes. They claimed desynchronized nodes could be corrected by some method introduced in the future, but it is not implemented yet.</p>
+<a class="header" href="#conflux" id="conflux"><h2>Conflux</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>6400</td><td>270</td><td>DAG</td><td>GHOST</td><td>△</td></tr>
+</tbody></table>
+<p>Conflux is a graph-based PoW consensus based on GHOST protocol that fixed the Phantom blockchain. Conflux uses GHOST protocol to select the main chain in a graph and produces a total ordering of the graph by the main chain. Thus, it is generalized Bitcoin consensus, and they also point out that the bias problem in Phantom blockchain.</p>
+<p>However, the latency is bounded by its PoW mechanism. It needs to wait for a period to select the correct and consistent main chain with high probability. Even if it switched to a PoS mechanism, the latency would still be unacceptably long since the GHOST protocol is a kind of longest chain rule consensus.</p>
+<a class="header" href="#dfinity" id="dfinity"><h2>Dfinity</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>500 ~ 1000</td><td>5 ~ 10</td><td>chain</td><td>Dfinity</td><td>O</td></tr>
+</tbody></table>
+<p>Dfinity is a permissioned blockchain and is designed for a large population (around 10K of nodes). Dfinity contains a randomness beacon which generates new randomness by a VRF (verifiable random function) with information from a new confirmed block. They use the randomness to select a leader and electors for a round. By hypergeometric distribution, Dfinity only samples hundred of nodes to notary a block instead of using all nodes, and this is correct with high probability. However, this reduces the tolerance ability to Byzantine nodes. For example, to achieve the majority of nodes is non-Byzantine with probability less than <img src="https://latex.codecogs.com/svg.latex?2^{-40}">, it needs to sample at least 423 nodes from 10K nodes with maximum 1/3 Byzantine nodes.
+However, Dfinity is chain-based, so its throughput is limited.</p>
+<a class="header" href="#eos" id="eos"><h2>EOS</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>3K</td><td>165</td><td>chain</td><td>longest chain &amp; Byzantine fault tolerance</td><td>O</td></tr>
+</tbody></table>
+<p>EOS reaches high throughput and low latency. They have 21 so-called &quot;supernodes,&quot; which are considered not decentralized. Also, at the time of writing, its Byzantine fault tolerance consensus is not implemented yet, so the confirmation time is about 165 seconds, not 1 or 2 seconds as they claimed.</p>
+<a class="header" href="#ethereum" id="ethereum"><h2>Ethereum</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>20</td><td>360</td><td>chain</td><td>longest chain</td><td>O</td></tr>
+</tbody></table>
+<p>Ethereum is the first blockchain system that has a complete DApp ecosystem. It has a throughput higher and latency lower than Bitcoin, but still not enough for daily usages such as payment or gaming. A popular DApp can block the whole system, causing high transaction fee. Also, the latency now (several minutes) is not acceptable for real-time applications.</p>
+<a class="header" href="#hashgraph" id="hashgraph"><h2>Hashgraph</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>200K</td><td>20</td><td>DAG</td><td>Hedera</td><td>O</td></tr>
+</tbody></table>
+<p>The consensus of Hashgraph is adapted Byzantine agreement on a graph, on the other hand, the core of DEXON consensus is based on total ordering algorithm. Their round-based structure costs a latency of <img src="https://latex.codecogs.com/svg.latex?O(log(n))*T_{network}" /> for each round, which means its confirmation time becomes longer when the number of nodes increases. With this limitation, it cannot be fully decentralized, or the confirmation time can be minutes. Also, the liveness is not guaranteed in Hashgraph. Only correctness proof is provided. With Byzantine nodes presented in its network, it is possible that Hashgraph does not output any block. Meanwhile, DEXON's confirmation time remain constant when the number of nodes increases.</p>
+<a class="header" href="#hyperledger" id="hyperledger"><h2>Hyperledger</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>4K</td><td>&lt; 1</td><td>chain</td><td>pluggable</td><td>O</td></tr>
+</tbody></table>
+<p>Hyperledger (specifically, Hyperledger Fabric) is a distributed ledger designed for enterprise use. It should be permissioned, low-latency, high-throughput and provides private transaction functionalities. Its consensus is modularized and pluggable. It can choose among consensus engines/algorithms such as Tendermint, PBFT, Kafka ordering or RAFT.</p>
+<p>It is much easier to address consensus problem in a permissioned consortium settings with high throughput and low latency because the assumption of the environment is: the number of nodes is fixed, each identity is known, the goal of all nodes is the same, and the network environment is stable and fast, but the node does not fully trust to each other. It does fit for enterprises to use such settings, while DEXON aims to be more open and decentralized, providing high throughput and low latency at the same time.</p>
+<a class="header" href="#iota" id="iota"><h2>IOTA</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>500 ~ 800</td><td>&gt; 180</td><td>DAG</td><td>longest chain rule</td><td>X</td></tr>
+</tbody></table>
+<p>IOTA follows the longest chain rule on a graph: a node randomly chooses and verifies two previous blocks and attaches its block to them. A block is confirmed if enough number of blocks followed it and the length of the connected chain is the longest.
+However, the rule is inefficient because the confirmation time is not guaranteed by a specific bound. Moreover, a block might be invalid if it is attached to a block that contains conflict transactions. That block has to be re-attached to other blocks. This causes a very long confirmation time. Furthermore, IOTA does not support smart contract due to the lack of total ordering among all blocks.</p>
+<a class="header" href="#kadena" id="kadena"><h2>Kadena</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>10K</td><td>20</td><td>DAG</td><td>Chainweb</td><td>O</td></tr>
+</tbody></table>
+<p>Kadena aims to solve the scalability issue of blockchain. It uses Chainweb to process transactions in parallel. Each chain includes others' block headers, forming a DAG similar to DEXON blocklattice. To perform cross-chain transactions, one has to provide Merkle proof to smart contract, and assets will be deleted from source chain and re-created on destination chain. Kadena also analyzes peer header relationships and uses specifically designed graphs that have a small diameter and large order to achieve low latency and high throughput.</p>
+<p>The latency of Chainweb is <img src="https://latex.codecogs.com/svg.latex?O(r)"/>, where <img src="https://latex.codecogs.com/svg.latex?r"/> is the diameter of a graph. When it scales up and increases the number of chains, the diameter of the graph also becomes larger, causing the latency to increase. Another problem is when proposing a block on a chain. The block has to include its peer's block headers. This means block proposing is blocking and not efficient, while in DEXON, a block actively acks any other newly proposed blocks, achieving fast non-blocking block proposing.</p>
+<a class="header" href="#nano" id="nano"><h2>NANO</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>7000</td><td>1</td><td>DAG</td><td>DPoS voting</td><td>X</td></tr>
+</tbody></table>
+<p>NANO is the first project that introduces blocklattice as their data structure. Each account has its blockchain, and a transaction it proposed is recorded on its blockchain. When a blockchain fork happens, NANO starts DPoS voting to resolve it.</p>
+<p>DEXON's blocklattice is entirely different from NANO's. In DEXON, instead of every account having its blockchain, each validator has a blockchain. This could save a lot of memory space. In our blocklattice, each vertex is a block, while in NANO, each vertex is half of a transaction (send tx or recv tx). From our viewpoint, their blocklattice is more like &quot;tx-lattice,&quot; not blocklattice, and we consider blocklattice a general term that can be used by other projects, just like blockchain, since it is just a type of DAG.</p>
+<p>DEXON's consensus algorithm is also completely different from NANO's. We use total ordering algorithm to decide an order of blocks and transactions, while NANO does not have consensus on order of transactions. Without ordering transactions, it can not support smart contract. Another problem is its DPoS to resolve fork. The voting process NANO used to resolve fork is mysterious. In its whitepaper, there is no detail about the voting process. The only thing we know is a majority voting with 4 rounds. Without further detail and security proof, we find it hard to believe that NANO is secure. Also, NANO needs PoW to prevent spam (penny) attack, increasing the cost of attack but also limiting its throughput and increasing its latency.</p>
+<a class="header" href="#omniledger" id="omniledger"><h2>Omniledger</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>6K</td><td>10</td><td>chain</td><td>ByzCoinX</td><td>△</td></tr>
+</tbody></table>
+<p>Omniledger aims to solve scalability problem without sacrificing security and decentralization. Its primary approach is sharding, which allows the throughput to scale linearly with the number of nodes. Omliledger also provides nice features such as ledger pruning, cross-shard transaction, and trust-but-verify validation.</p>
+<p>The problem of Omniledger is that its latency could be large in a fully decentralized setting. The reason is that it uses ByzCoinX (which is an optimization of PBFT-like consensus algorithm) for intra-shard consensus and Atomix (DB-like atomic broadcast) for inter-shard transactions. This means the group size in a shard for communication cannot be too large, or the communication cost and latency will be large. To increase the number of nodes with limited shard size, the number of shards will increase, and the needs for cross-shard transactions will also increase. With atomic broadcast, a cross-shard transaction has to wait for every involved shard to be confirmed, and even a single shard failed will cause the transaction to fail. In DEXON, transactions only need to enter one shard and will be output immediately.</p>
+<p>Omniledger also sacrifices some of the security. According to hypergeometric distribution, if the sampled Byzantine nodes in a shard must be less than one third, one can only tolerate Byzantine nodes much less than one third in the whole network, or sampling cannot be successful with high probability. This is why the number of Byzantine nodes Omniledger can tolerate is one fourth, not one-third of total nodes.</p>
+<a class="header" href="#ontology" id="ontology"><h2>Ontology</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>5K</td><td>20</td><td>DAG</td><td>Ontorand</td><td>O</td></tr>
+</tbody></table>
+<p>Ontology consensus algorithm Ontorand uses randomness from the last block to generate new block proposer and validators. Its Byzantine agreement voting process (although not detailed enough) looks extremely similar to Algorand. Its verifiable random function which generates randomness in a block is exactly the same as Algorand. Without any citation and improvement from Algorand, Ontorand is nothing but a copycat. For the comparison to Algorand, please reference <a href="#algorand">here</a>.</p>
+<a class="header" href="#orbs-helix" id="orbs-helix"><h2>Orbs Helix</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>10</td><td>NA</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+</tbody></table>
+<p>The top priority of Helix is fairness. It uses VRF (verifiable random function) as an unbiased random source to elect committee and leader. When running its core consensus (PBFT), all transactions are encrypted by users using threshold encryption. This means there is no way a node can censor or prioritize any transaction. After consensus is reached, the content of a block is then decrypted, and transactions are executed. Thus, the order of transactions cannot be biased, achieving fairness. Helix also uses VRF to decide which transaction can be put into a block. Because nodes cannot decide which transactions to be put into a block, transaction fees can be set to a constant.</p>
+<p>Unfortunately, fairness does not come without cost. Threshold encryption not only increases computational cost but needs an extra phase of decryption. This increase the latency. What's worse, its chain structure is not scalable. To solve the scalability problem, Orbs introduces &quot;intelligent sharding&quot; (which we did not find any technical detail). A recent simulation shows that Helix has only 10 TPS (with unknown latency). With 100 shards, it can reach 1000 TPS, while DEXON has 1M+ TPS with a hundred nodes in one shard.</p>
+<a class="header" href="#phantom" id="phantom"><h2>Phantom</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>NA</td><td>DAG</td><td>greedy selection algorithm</td><td>△</td></tr>
+</tbody></table>
+<p>Phantom is a DAG-based blockchain which is generalized from Bitcoin's longest chain rule on a chain to a DAG. Phantom is a proposal for Spectre, and they proposed a greedy algorithm called ghostDAG protocol to achieve total ordering. However, they did not prove the correctness and liveness of their algorithm or provide the simulation results about Phantom in the distributed setting. Another liveness attack on Phantom was individually proposed by the work from Li et al. and the work from Kiayias and Panagiotakos. They also claimed they would try to combine Phantom and Spectre in the future. We will update the information if they provide new and correct results.</p>
+<p>On the other hand, the total ordering in DEXON consensus is guaranteed. Moreover, the correctness and liveness of DEXON consensus are both proved.</p>
+<a class="header" href="#radix" id="radix"><h2>Radix</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>3.5</td><td>5</td><td>chain</td><td>logical clock</td><td>O</td></tr>
+</tbody></table>
+<p>Radix uses sharding technique to increase throughput. In order to reach consensus among different shards, a transaction needs to be gossipped and be validated by many nodes. Each node provides its local logical clock and appends its value to the transaction. Nodes can then use this logical clock vector to decide partial ordering between two conflict transactions. In case of a concurrent set, a node finds other transactions from its local storage or from its peer trying to decide partial ordering of transactions.</p>
+<p>There is a fundamental problem in Radix: a partial ordering can never become total ordering without consensus algorithm. Some partial ordering of transactions in Radix can be decided by vector timestamps, but no matter how many transactions are involved, there always exists some cases that concurrent set can never be resolved. In other words, orders of some transactions may never be decided and will not be output by the system. What's worse, when a network is shortly partitioned or has a long delay, nodes can have different local views. Since a node decides an ordering from other transactions from its local view, this will cause different ordering among nodes, resulting in a fork, and there is no consensus algorithm in Radix to address this issue.</p>
+<p>To sum up, Radix does not have consensus. It can be used in private / permissioned settings but will not work in a real network environment.</p>
+<a class="header" href="#snowflake" id="snowflake"><h2>Snowflake</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>1300</td><td>4</td><td>DAG</td><td>Avalanche</td><td>△</td></tr>
+</tbody></table>
+<p>Snowflake consensus starts from a simple coloring method, adds additional counters and rules, and finally ends up a provably probabilistic secure consensus algorithm, Avalanche. All nodes converge to the same color, which means that they will agree on the same transaction set when conflict happens.</p>
+<p>In order to resolve conflict transactions, nodes need to execute Avalanche algorithm on every transaction in a conflict set. So an attacker can spam the system with a large number of conflict transactions, resulting in the system to execute Avalanche algorithm hundreds of thousands of times, and the latency will grow significantly. DEXON will not suffer from such an attack. After total order being decided, the first transaction in the conflict set will be executed, while other conflict transactions are ignored.</p>
+<a class="header" href="#spectre" id="spectre"><h2>Spectre</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>1 ~ 10</td><td>DAG</td><td>block voting algorithm</td><td>X</td></tr>
+</tbody></table>
+<p>Spectre is a DAG-based digital ledger system that uses recursive block voting to decide which conflict block should be finalized. This consensus algorithm allows participants to propose block arbitrarily fast, which means its scalability and latency is bounded by the network. However, its lack of total ordering of blocks makes it impossible to execute a smart contract. That is the reason why they propose &quot;Phantom,&quot; a consensus that is also DAG-based but with total ordering properties. We also compare DEXON to <a href="#phantom">Phantom</a>.</p>
+<a class="header" href="#stellar" id="stellar"><h2>Stellar</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>1K ~ 10K</td><td>2 ~ 5</td><td>chain</td><td>Stellar Consensus</td><td>O</td></tr>
+</tbody></table>
+<p>Stellar uses a generalized version of traditional Byzantine agreement protocol, which they called &quot;federated Byzantine agreement.&quot; This consensus algorithm requires participants to choose their own quorum slices. If quorum intersection is satisfied, it is proved that all intact participants will reach consensus.</p>
+<p>The only concern about this kind of consensus is that whether a node can remain intact (not affected by Byzantine nodes) depends on the choice of its quorum slices. In order to have a secure configuration with fast response and stable service, it is better for a node to choose nodes set up by reliable companies or banks as quorum slices, which may lead to semi-centralization.</p>
+<a class="header" href="#tendermint" id="tendermint"><h2>Tendermint</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>1 ~ 3</td><td>chain</td><td>PBFT</td><td>△</td></tr>
+</tbody></table>
+<p>Tendermint uses PBFT as their consensus algorithm. Although PBFT has low latency in permissioned settings, it can not be permissionless, because PBFT has a heavy communication cost of <img src="https://latex.codecogs.com/svg.latex?O(b*n^2)" /> due to its two-phase commit. This means when the number of nodes increases, the required bandwidth of network will also increase quadratically, limiting the number nodes. DEXON uses cryptographic sortition sharding technique and configurable ack frequency to reduce the communication cost to <img src="https://latex.codecogs.com/svg.latex?O(f*n*log(n))" />.</p>
+<a class="header" href="#thunderella" id="thunderella"><h2>Thunderella</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>1.5</td><td>chain</td><td>BFT + longest chain</td><td>△</td></tr>
+</tbody></table>
+<p>Thunderella combines two different consensus algorithms and tries to achieve high security with good performance. With less than one-fourth of the committee are Byzantine nodes, it can achieve a low latency with BFT algorithm. With more than one fourth, it can fall back to any blockchain system that can tolerate less than <img src="https://latex.codecogs.com/svg.latex?\frac{1}{2}n" /> Byzantine nodes.</p>
+<p>If more than one-fourth of the committee is Byzantine node, Thunderella becomes as slow as a blockchain, while DEXON remains its low latency. Also, Thunderella is a chain-based system, and it can not scale.</p>
+<a class="header" href="#ton" id="ton"><h2>TON</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>M+</td><td>5</td><td>DAG</td><td>BFT</td><td>O</td></tr>
+</tbody></table>
+<p>TON (Telegram Open Network) is a blockchain system featuring high throughput with short confirmation time. To achieve this, they propose a new point of view called &quot;Infinite Sharding Paradigm,&quot; which tries to push sharding to its extreme. In TON, there is a masterchain for general state finalization. Under a masterchain, there are several workchains to perform specific tasks for different cryptocurrencies and services. If a workchain is overloaded, under that it can have several shardchains to increase throughput. In each chain, validators run a BFT-based consensus algorithm with a DPoS mechanism to propose blocks. With this sharding design, TON claims it can reach several millions of TPS with 5 seconds latency.</p>
+<p>One significant difference between TON and DEXON is that TON needs to run BFT consensus algorithm on several different levels of the chains. For masterchain, it requires all validators to participate in BFT algorithm. Since BFT algorithm is typically not scalable, we can only have a limited number of nodes to participate in masterchain. This can be considered a bit centralized. In DEXON, we do not require all nodes to run a single BFT algorithm; thus we can have hundreds of thousands of nodes participating in our system.</p>
+<p>TON also has a finalization problem. It allows validators to modify invalid blocks without forking since it is more efficient and will only affect some history blocks. However, this design also allows an attacker to modify arbitrary history blocks if they can compromise the validator set. Typically in a system with BFT finalization, it should be impossible to modify history even if the current validator set is compromised. Even in traditional PoW scheme, launching a 51% attack and modifying history blocks has a much higher cost with low probability to success. This design may cause security issue in TON.</p>
+<a class="header" href="#vite" id="vite"><h2>Vite</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>NA</td><td>10</td><td>DAG</td><td>longest chain</td><td>O</td></tr>
+</tbody></table>
+<p>Vite mainly fixes NANO's problem we mentioned in our <a href="#nano">comparison to NANO</a>. It uses the same blocklattice with NANO, but additionally adds a new consensus mechanism (HDPoS) to construct a snapshot chain. This not only solves security issues in NANO but also orders transactions, making it capable to run smart contract. What's more, Vite inherits NANO's advantages, including nearly instant transactions with high TPS.</p>
+<p>One of the difficult challenges to use a DAG structure is to decide the ordering of transactions. Vite has a global consensus group to run a consensus algorithm to create snapshot chain. This algorithm is important because it is the key to improve NANO's disadvantages on security and lack of total ordering. Unfortunately, we can not find any detail about the algorithm in their paper and do not know how transactions on blocklattice are picked and put into snapshot chain. Is this critical process secure and fair? To address this challenges, DEXON develops total ordering algorithm to compact blocklattice into compaction chain. This algorithm is provably secure and reasonably fair.</p>
+<a class="header" href="#zilliqa" id="zilliqa"><h2>Zilliqa</h2></a>
+<table><thead><tr><th>Throughput (TPS)</th><th>Latency (seconds)</th><th>Data Structure</th><th>Consensus</th><th>Smart Contract</th></tr></thead><tbody>
+<tr><td>3K</td><td>10 ~ 20</td><td>chain</td><td>PBFT</td><td>O</td></tr>
+</tbody></table>
+<p>Zilliqa is an optimized PBFT. It uses EC-Schnorr multi-signature to aggregate signatures from nodes. This reduces communication cost from <img src="https://latex.codecogs.com/svg.latex?O(n^2)" /> to <img src="https://latex.codecogs.com/svg.latex?O(n)" />. To address limited throughput in a chain-based system, Zilliqa uses sharding technique to process transactions in parallel. A specific shard collects micro blocks from normal shards to produce final blocks.</p>
+<p>There are several drawbacks in Zilliqa. First of all, multi-signature aggregation is computationally costly. This is not a problem with ten-second finalization time, but in sub-second finalization time, it is not feasible with a large number of nodes in a shard. Second, Zilliqa uses a specific shard running consensus protocol to combine micro blocks from other shards. This doubles the latency. In DEXON, there is no specific shard to run another redundant consensus protocol. DEXON sharding mechanism is symmetric. We use consensus timestamp computed by total ordering algorithm to form compaction chain, which nodes in each shard can compute by themselves when receiving finalized blocks from other shards.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="Resource.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="DEXON-PAPERS.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="Resource.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="DEXON-PAPERS.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
