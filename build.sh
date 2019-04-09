@@ -2,7 +2,7 @@
 
 git submodule update
 git -C src pull origin master
-git commit -am 'Update wiki.wiki refs'
+git commit -am 'Update src refs'
 mdbook build
 
 git checkout gh-pages
