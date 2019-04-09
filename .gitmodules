@@ -1,3 +1,6 @@
 [submodule "wiki.wiki"]
 	path = wiki.wiki
 	url = https://github.com/dexon-foundation/wiki.wiki.git
+[submodule "src"]
+	path = src
+	url = https://github.com/dexon-foundation/wiki.wiki.git
