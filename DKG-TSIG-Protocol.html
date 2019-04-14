@@ -145,15 +145,16 @@
 <ul>
 <li>λ = MAX(One gossip duraion, transaction confirm latency)</li>
 <li>Signature = <a href="https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham">BLS</a></li>
-<li>Curve = CurveFp382_2</li>
+<li>Curve = BLS12_381</li>
 <li>n = size of <code>notary_set</code></li>
-<li>t = <img src="https://latex.codecogs.com/svg.latex?\inline%20\left\lfloor\frac{n}{3}\right\rfloor" /></li>
+<li>t = <img src="https://latex.codecogs.com/svg.latex?\inline%20\left\lfloor\frac{2n}{3}\right\rfloor+1" /></li>
 </ul>
 <a class="header" href="#notes" id="notes"><h3>Notes</h3></a>
 <ul>
 <li>Complaints and nack complaints are stored in governance contract; therefore, the broadcast is reliable.</li>
 <li>Governance contract will do the sanity check for complaints and nack complaints before adding to its state.</li>
 <li>Once a validator proposed <code>DKGFinal_i</code>, it can no longer propose any complaint.</li>
+<li>After DKG finished, if successful qualify nodes size is less than <img src="https://latex.codecogs.com/svg.latex?\inline%20\left\lfloor\frac{5}{6}\right\rfloor" /> of notary set size, DKG will be rerun with different set of nodes.</li>
 </ul>
 <a class="header" href="#phase-1-id-registration" id="phase-1-id-registration"><h2>Phase 1 ID Registration</h2></a>
 <a class="header" href="#-t--0" id="-t--0"><h3>@ T &lt; 0</h3></a>
@@ -191,6 +192,7 @@
 <p>If there are more than <code>t</code> nack complaints to validator <code>j</code> (<img src="https://latex.codecogs.com/svg.latex?\inline%20\sum_{i}%20NCMP_{i,j}%20>%20t" /> (<code>i</code> : for all validator <code>i</code>)), then <code>j</code> is marked as <strong>Disqualified</strong>.</p>
 <p>If there is <strong>one</strong> complaint, <code>CMP_i,j</code>, to validator <code>j</code>, then <code>j</code> is marked as <strong>Disqualified</strong>.</p>
 <p>Each validator <code>i</code> determines the combined secret key, <img src="https://latex.codecogs.com/svg.latex?\inline%20CSK_{i}%20=%20\sum_{k}%20SK_{k,i}" /> (<code>k</code>: validator <code>k</code> is not marked as <strong>Disqualified</strong>)</p>
+<p>If a validator <code>i</code> successfully recovered combined secret key, it will broadcast a <code>DKGSuccess_i</code> message.</p>
 <p>Each validator <code>i</code> sign the message with <code>CSK_i</code> and broadcast the partial signature, <code>PSign_i</code>.</p>
 <p>Each validator <code>i</code> determines the combined public key of validator <code>j</code>, <img src="https://latex.codecogs.com/svg.latex?\inline%20CPK_{j}%20=%20\sum_{k}%20PK_{k,j}" /> (<code>k</code>: validator <code>k</code> is not marked as <strong>Disqualified</strong>)</p>
 <a class="header" href="#phase-10-tsig" id="phase-10-tsig"><h2>Phase 10 TSIG</h2></a>
