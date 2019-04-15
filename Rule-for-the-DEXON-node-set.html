@@ -144,9 +144,7 @@
 <p>We introduce the rule for node set and give a brief explanation to the functions in DEXON <a href="https://testnet.dexscan.org/address/0x63751838D6485578B23e8b051d40861eCC416794">governance contract</a>.</p>
 <a class="header" href="#active-condition-permission-to-be-in-notary-set" id="active-condition-permission-to-be-in-notary-set"><h2>Active condition (permission to be in notary set)</h2></a>
 <p>You must deposit enough stake in the governance contract to get the qualification to be selected in the notary set.
-Sometimes nodes who violate the rule for notary set will be fined some coin. This leads nodes unqualified to be selected in the notary set. Nodes can be re-qualify if paying the fined such that</p>
-<pre><code>stake - fine &gt;= 1M DXN
-</code></pre>
+Sometimes nodes who violate the rule for notary set will be fined some coin. This leads nodes unqualified to be selected in the notary set. Nodes can be re-qualify after paying the fine.</p>
 <a class="header" href="#reward" id="reward"><h2>Reward</h2></a>
 <p>The reward of each block is calculated as</p>
 <pre><code>block_Reward = mining_Velocity * total_Staked * round_Interval / (365*24*60*60)
@@ -168,7 +166,7 @@ Sometimes nodes who violate the rule for notary set will be fined some coin. Thi
 <li>Failing to finish distributed key generation (DKG)</li>
 <li>Failing to propose any blocks during a whole epoch</li>
 </ol>
-<p>For 1. to 4., the entire stake will be confiscated immediately by DEXON Foundation. For 5., a fine of the <code>1 dei</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.  For 6., a fine of the <code>Block Reward*86400/total Node</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.</p>
+<p>For 1. to 4., the entire stake will be confiscated immediately by DEXON Foundation. For 5., a fine of the <code>1 DXN</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.  For 6., a fine of the <code>Block Reward*86400/total Node</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.</p>
 <a class="header" href="#contract-write-function" id="contract-write-function"><h2>Contract Write function</h2></a>
 <p>In this section, we briefly introduce some functions that DEXON governance provides to write in.</p>
 <a class="header" href="#register" id="register"><h3>Register</h3></a>
