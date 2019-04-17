@@ -2408,34 +2408,17 @@ Applicable law, regulation, and executive orders may require DEXON Foundation to
 <!-- [[ABI AUTOGEN END]] -->
 <a class="header" href="#configuration-change" id="configuration-change"><h1>Configuration Change</h1></a>
 <a class="header" href="#overview-2" id="overview-2"><h2>Overview</h2></a>
-<p>The configuration for DEXON is round based configuration, which is allowed to be changed and applied in upcoming rounds on the fly without shutdowning/forking the system. Configurable parameters including:</p>
+<p>The configuration for DEXON is round based configuration, which is allowed to be changed and applied in upcoming rounds on the fly without shutting down or forking the system.
+Each configuration will become effective two rounds after updating. Configurable parameters including:</p>
 <ul>
-<li>NumChains: the number of chains in blocklattice.</li>
-<li>K: the <code>K</code> parameter used in total ordering algorithm.</li>
-<li>PhiRatio: the <code>Phi</code> parameter used in total ordering algorithm with this equation: <code>Phi = NumChains * PhiRation</code>.</li>
-<li>NotarySetSize: the number of nodes in one notary set for one chain.</li>
-<li>DKGSetSize: the number of nodes in DKG set.</li>
-<li>RoundInterval: the interval for this round.</li>
-<li>MinBlockInterval: the minimum interval of timestamps between blocks on the same chain.</li>
-</ul>
-<a class="header" href="#configuration-change-for-byzantine-agreement" id="configuration-change-for-byzantine-agreement"><h2>Configuration Change for Byzantine Agreement</h2></a>
-<p>The round for agreement module on each chain is unique. Therefore, the only configuration change needs to be handled in this module is adding new chains.</p>
-<a class="header" href="#configuration-change-for-blocklattice" id="configuration-change-for-blocklattice"><h2>Configuration Change for Blocklattice</h2></a>
-<p>There would be blocks from multiple rounds in blocklattice at the same time. Thus the simplest way to make it supports various numbers of chains is to make it support the maximum number of chains. The blocklattice module would resize its internal structure to fulfill the largest number of chains it sees.</p>
-<a class="header" href="#configuration-change-for-total-ordering" id="configuration-change-for-total-ordering"><h2>Configuration Change for Total Ordering</h2></a>
-<p>We can't tolerant more than one set of parameters (K, Phi, NumChains) in this module, they are basis for the potential functions used in total ordering thus should be global and unique in total ordering module. The configuration switching procedure used in DEXON for total ordering is <code>Flush</code>.</p>
-<a class="header" href="#flush-procedures" id="flush-procedures"><h3>Flush Procedures</h3></a>
-<ul>
-<li>When there are configuration change at round <code>R+1</code>, the <code>flush setup procedure</code> would be triggered when the first <strong>ending block</strong> on some chain for round R is delivered by total ordering.</li>
-<li>Once <code>flush setup procedure</code> triggered, no blocks would be delivered until all <strong>ending blocks</strong> for round R on each chain is received by total ordering module. Once this condition is met, the total ordering would enter <code>flush main procedure</code>.</li>
-<li>In <code>flush main procedure</code>, all blocks in round <code>R</code> would be delivered directly in topological order based on their acking relationships. Blocks at round <code>R+1</code> would be skipped during flush. Since the acking relations between blocks in different rounds are restricted, the causality between blocks is preserved.</li>
-<li>Once all blocks in round <code>R</code> is flushed, the total ordering module switches back to normal delivery mode, that is, delivered by total ordering algorithm.</li>
-</ul>
-<a class="header" href="#rules-for-acking-relations-for-blocks-between-rounds" id="rules-for-acking-relations-for-blocks-between-rounds"><h3>Rules for acking relations for blocks between rounds</h3></a>
-<p>No block in round R should ack blocks in future round (R+1, R+2, ...), even if their are proposed earlier. This rule is required because:</p>
-<ul>
-<li>We would deliver blocks without rounds interleave when flushing, to maintain the causality between blocks, all blocks delivered ealier should not ack blocks delivered later.</li>
-<li>Blocks in R+1 round might be picked as candidates when flushing. We would ignore those candidates from R+1 directly, based on the causality preserved by this rule.</li>
+<li>MinStake: minimum stake required for becoming a bp.</li>
+<li>LockupPeriod: time required for funds available for withdrawing after unstake.</li>
+<li>MinGasPrice: minimum gas price.</li>
+<li>LambdaBA, LambdaDKG: period for each step for DEXON Byzantine Agreement and DEXON DKG protocol.</li>
+<li>NotaryParamAlpha, NotaryParamBeta: parameter for calculating notary set size. Refer to <a href="Selection-of-the-notary-set-size.html">Selection of notary set size</a>.</li>
+<li>RoundLength: the number of blocks in a round.</li>
+<li>MinBlockInterval: the minimum interval of timestamps between blocks on the blockchain.</li>
+<li>FineValues: penalty for not following protocol. Refer to <a href="Rule-for-the-DEXON-node-set.html">Rule for the DEXON node set</a>.</li>
 </ul>
 <a class="header" href="#resource" id="resource"><h1>Resource</h1></a>
 <a class="header" href="#dexon-comparison-to-other-blockchain" id="dexon-comparison-to-other-blockchain"><h1>DEXON Comparison to Other Blockchain</h1></a>
