@@ -179,12 +179,6 @@
 <li><a href="https://github.com/dexon-foundation/wiki/wiki/Installation-Instructions-for-Ubuntu">Installation Instructions for Ubuntu</a></li>
 </ul>
 <a class="header" href="#software-instruction" id="software-instruction"><h2>Software Instruction</h2></a>
-<a class="header" href="#download-dexon-fullnode-implementation" id="download-dexon-fullnode-implementation"><h3>Download DEXON fullnode implementation</h3></a>
-<pre><code>git clone git@github.com:dexon-foundation/dexon.git
-</code></pre>
-<p>go into the dictionary</p>
-<pre><code>cd dexon
-</code></pre>
 <a class="header" href="#generate-node-key" id="generate-node-key"><h3>Generate Node Key</h3></a>
 <p>A node key is required to operate a BP node. Run the following command to generate a node key:</p>
 <pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon-tools \
@@ -237,19 +231,6 @@ The user whose stake is locked (bought DXN coin in private-sale), please contact
 </ol>
 <p>After this, you are successfully staked and the configuration will start to take effect after 2 epochs (2400 blocks).</p>
 <p>Note that, the account of node.key and the account to send DXN coin to governance contract are not necessary to be the same. We strongly suggest using different keys to manage the risk.</p>
-<p>Then, you can start a BP node</p>
-<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon \
-    --bp \
-    --nodekey=/mnt/node.key \
-    --datadir=/mnt/datadir \
-    --syncmode=full \
-    --cache=1024 \
-    --gcmode=archive
-</code></pre>
-<p>, or, you can run through container as explaining in the next section.
-For more detail instruction about <code>gdex</code>, go to https://github.com/dexon-foundation/dexon or use</p>
-<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon --help
-</code></pre>
 <a class="header" href="#start-the-bp-node" id="start-the-bp-node"><h3>Start the BP node</h3></a>
 <p>Use the following command to start the BP node:</p>
 <pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon \
@@ -261,6 +242,9 @@ For more detail instruction about <code>gdex</code>, go to https://github.com/de
     --gcmode=archive
 </code></pre>
 <p>Please make sure you have enough disk space in the current working directory</p>
+<p>For more detail instruction about <code>gdex</code>, go to https://github.com/dexon-foundation/dexon or use</p>
+<pre><code>docker run -v $PWD:/mnt -it dexonfoundation/dexon --help
+</code></pre>
 <a class="header" href="#mining-mechanism" id="mining-mechanism"><h2>Mining Mechanism</h2></a>
 <a class="header" href="#a-hrefhttpsgithubcomdexon-foundationwikiwikidexon-cryptoeconomicsdexon-mining-economy-and-mining-rewardsa" id="a-hrefhttpsgithubcomdexon-foundationwikiwikidexon-cryptoeconomicsdexon-mining-economy-and-mining-rewardsa"><h3><a href="https://github.com/dexon-foundation/wiki/wiki/DEXON-Cryptoeconomics">DEXON Mining Economy and Mining Rewards</a></h3></a>
 <p>Please read this document, https://github.com/dexon-foundation/wiki/wiki/DEXON-Cryptoeconomics</p>
