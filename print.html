@@ -483,8 +483,11 @@ contract Rand {
 }
 </code></pre>
 <a class="header" href="#interact-with-contracts" id="interact-with-contracts"><h1>Interact with Contracts</h1></a>
+<p>WIP</p>
 <a class="header" href="#from-web" id="from-web"><h1>from Web</h1></a>
+<p>WIP</p>
 <a class="header" href="#from-mobile-app" id="from-mobile-app"><h1>from Mobile App</h1></a>
+<p>WIP</p>
 <a class="header" href="#migrate-from-ethereum-1" id="migrate-from-ethereum-1"><h1>Migrate from Ethereum</h1></a>
 <p>DEXON's version of EVM is almost the same as the original EVM, therefore DEXON version of Solidity is almost the same as the original Solidity. If you have built a smart contract on Ethereum, you can usually deploy the exact same contract onto DEXON without any modification.</p>
 <p>However, there are still some minor differences between the DEXON's version of Solidity and its Ethereum counterpart to look out for, as listed below:</p>
@@ -583,13 +586,123 @@ Native mobile library for accessing DEXON network from iOS or Android apps.</p>
 </li>
 </ul>
 <a class="header" href="#dexonscan" id="dexonscan"><h1>DEXONSCAN</h1></a>
+<p>Official blockchain explorer and web wallet for DEXON. You can also check network status and interact with smart contracts in DEXONSCAN.</p>
+<a class="header" href="#usage" id="usage"><h2>Usage</h2></a>
+<p>Go directly to DEXONSCAN websites and start exploring DEXON networks.</p>
+<ul>
+<li><a href="https://dexonscan.app">Mainnet DEXONSCAN</a></li>
+<li><a href="https://testnet.dexonscan.app">Testnet DEXONSCAN</a></li>
+</ul>
+<a class="header" href="#features" id="features"><h2>Features</h2></a>
+<a class="header" href="#view-network-status" id="view-network-status"><h4>View Network Status</h4></a>
+<p><img src="https://storage.googleapis.com/dexon-assets/wiki/dexonscan-network.png" alt="" />
+DEXONSCAN provides a comprehensive chart and a series of stats for you to get a grasp of the current network status easily.</p>
+<a class="header" href="#view-governance-status" id="view-governance-status"><h4>View Governance Status</h4></a>
+<p>You can check the network governance status on DEXONSCAN, including network configurations like block time, minimum staking amount, round length and currently active block producing nodes.</p>
+<a class="header" href="#view-blocks-addresses-and-transactions" id="view-blocks-addresses-and-transactions"><h4>View Blocks, Addresses and Transactions</h4></a>
+<p>Just like every other blockchain explorers, you can check the details of blocks, addresses and transactions on DEXONSCAN.</p>
+<a class="header" href="#wallet" id="wallet"><h4>Wallet</h4></a>
+<p>DEXONSCAN provides wallet UI, with connectability to Chrome/Firefox wallet extension, Ledger and TREZOR. You can manage your assets on DEXON easily and securely with DEXONSCAN.</p>
+<a class="header" href="#smart-contract-interactions" id="smart-contract-interactions"><h4>Smart Contract Interactions</h4></a>
+<p>Smart contract developers can verify their contract source code on DEXONSCAN. Once it's verified, users can see the contract source code and interact with it on DEXONSCAN UI.</p>
 <a class="header" href="#dexon-remix" id="dexon-remix"><h1>DEXON Remix</h1></a>
+<p>Web-based IDE for developing, compiling, deploying and testing smart contracts.</p>
+<a class="header" href="#usage-1" id="usage-1"><h2>Usage</h2></a>
+<p>You can either use our <a href="https://remix.dexon.org">hosted version</a> or download from npm</p>
+<pre><code class="language-bash"># Install from npm
+&gt; npm install @dexon-foundation/remix-ide -g
+
+# run local DEXON-remix IDE
+&gt; dremix-ide
+</code></pre>
+<p>Check out our step-by-step guide for DEXON Remix IDE <a href="./Remix-IDE.html">here</a></p>
+<a class="header" href="#github" id="github"><h2>Github</h2></a>
+<p><a href="https://github.com/dexon-foundation/remix-ide">https://github.com/dexon-foundation/remix-ide</a></p>
+<a class="header" href="#features-1" id="features-1"><h2>Features</h2></a>
+<ul>
+<li>
+<p><strong>Smart Contract Editor</strong><br />
+Remix IDE provides a fully functioned solidity code editor.</p>
+</li>
+<li>
+<p><strong>Smart Contract Compiler</strong><br />
+You can compile your smart contract directly from the UI.</p>
+</li>
+<li>
+<p><strong>Contract Deployer</strong>
+Deploy compiled bytecode onto DEXON networks or JavaScript mock network.</p>
+</li>
+<li>
+<p><strong>Debugger</strong><br />
+Test run and add breakpoints to your smart contract source code.</p>
+</li>
+</ul>
 <a class="header" href="#dexon-truffle" id="dexon-truffle"><h1>dexon-truffle</h1></a>
+<p>Toolkit for developing Solidity smart contracts on DEXON, including compiler, contract deployer, test suite and a lot more.</p>
+<a class="header" href="#usage-2" id="usage-2"><h2>Usage</h2></a>
+<pre><code class="language-bash"># Install from npm
+&gt; npm install @dexon-foundation/truffle -g
+
+# run command-line tools
+&gt; dexon-truffle init|compile|migrate|test
+</code></pre>
+<a class="header" href="#github-1" id="github-1"><h2>Github</h2></a>
+<p><a href="https://github.com/dexon-foundation/truffle">https://github.com/dexon-foundation/truffle</a></p>
 <a class="header" href="#dexon-ganache" id="dexon-ganache"><h1>dexon-ganache</h1></a>
+<p>JavaScript mock of DEXON blockchain, for developing and testing smart contracts without actually connecting to a blockchain.</p>
+<a class="header" href="#usage-3" id="usage-3"><h2>Usage</h2></a>
+<pre><code class="language-bash"># Install from npm
+&gt; npm install @dexon-foundation/ganache-cli -g
+
+# run local Ganache
+&gt; dexon-ganache-cli
+</code></pre>
+<a class="header" href="#github-2" id="github-2"><h2>Github</h2></a>
+<p><a href="https://github.com/dexon-foundation/ganache-cli">https://github.com/dexon-foundation/ganache-cli</a></p>
+<p><a href="https://github.com/dexon-foundation/ganache-core">https://github.com/dexon-foundation/ganache-core</a></p>
 <a class="header" href="#sol-tools" id="sol-tools"><h1>sol-tools</h1></a>
+<p>Toolkit for compiling, testing and profiling smart contracts. Originally developed by 0x team.</p>
+<a class="header" href="#usage-4" id="usage-4"><h2>Usage</h2></a>
+<pre><code class="language-bash"># Install from npm
+&gt; npm install @dexon-foundation/sol-compiler -g
+&gt; npm install @dexon-foundation/sol-coverage -g
+&gt; npm install @dexon-foundation/sol-profiler -g
+&gt; npm install @dexon-foundation/sol-trace -g
+
+# run command-line tools
+&gt; dsol-compiler
+&gt; dsol-coverage
+&gt; dsol-profiler
+&gt; dsol-trace
+</code></pre>
+<a class="header" href="#github-3" id="github-3"><h2>Github</h2></a>
+<p><a href="https://github.com/dexon-foundation/sol-tools">https://github.com/dexon-foundation/sol-tools</a></p>
 <a class="header" href="#dsolidity" id="dsolidity"><h1>dsolidity</h1></a>
+<p>Solidity compiler written in C++, supporting additional DEXON-specific opcodes like on-chain random oracle.</p>
+<a class="header" href="#usage-5" id="usage-5"><h2>Usage</h2></a>
+<p>Instructions about how to build and install the Solidity compiler can be found in the <a href="https://solidity.readthedocs.io/en/latest/installing-solidity.html#building-from-source">Solidity documentation</a></p>
+<a class="header" href="#github-4" id="github-4"><h2>Github</h2></a>
+<p><a href="https://github.com/dexon-foundation/dsolidity">https://github.com/dexon-foundation/dsolidity</a></p>
 <a class="header" href="#dsolc-js" id="dsolc-js"><h1>dsolc-js</h1></a>
+<p>JavaScript bindings for DEXON's dsolidity compiler.</p>
+<a class="header" href="#usage-6" id="usage-6"><h2>Usage</h2></a>
+<pre><code class="language-bash"># Install from npm
+&gt; npm install @dexon-foundation/dsolc -g
+
+# run command-line tools
+&gt; dsolcjs --help
+</code></pre>
+<a class="header" href="#github-5" id="github-5"><h2>Github</h2></a>
+<p><a href="https://github.com/dexon-foundation/dsolc-js">https://github.com/dexon-foundation/dsolc-js</a></p>
 <a class="header" href="#web3js" id="web3js"><h1>web3.js</h1></a>
+<p>JavaScript library for accessing DEXON network from browser and Node.js.</p>
+<a class="header" href="#usage-7" id="usage-7"><h2>Usage</h2></a>
+<pre><code class="language-bash"># Install from npm
+&gt; npm install web3 --save
+</code></pre>
+<p>Get more information for web3.js <a href="https://web3js.readthedocs.io/">here</a></p>
+<a class="header" href="#github-6" id="github-6"><h2>Github</h2></a>
+<p><a href="https://github.com/ethereum/web3.js/">https://github.com/ethereum/web3.js/</a></p>
 <a class="header" href="#mobile-sdk" id="mobile-sdk"><h1>Mobile SDK</h1></a>
 <a class="header" href="#api" id="api"><h1>API</h1></a>
 <a class="header" href="#json-rpc-api" id="json-rpc-api"><h1>JSON-RPC API</h1></a>
@@ -2820,7 +2933,7 @@ However, the rule is inefficient because the confirmation time is not guaranteed
 </ul>
 <a class="header" href="#exchange-integration-guide" id="exchange-integration-guide"><h1>Exchange Integration Guide</h1></a>
 <p>This guide provides all the necessary details for integrating DEXON with your exchange.</p>
-<a class="header" href="#wallet" id="wallet"><h2>Wallet</h2></a>
+<a class="header" href="#wallet-1" id="wallet-1"><h2>Wallet</h2></a>
 <p>DEXON TX signature algorithm is exactly the same as Ethereum (secp256k1), you can use existing Ethereum wallet with DEXON.</p>
 <a class="header" href="#rpc" id="rpc"><h2>RPC</h2></a>
 <p>DEXON RPC is compatible with Ethereum. In theory, you can use existing Ethereum module with DEXON by replacing the RPC endpoint:</p>
