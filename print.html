@@ -708,7 +708,7 @@ Test run and add breakpoints to your smart contract source code.</p>
 <a class="header" href="#json-rpc-api" id="json-rpc-api"><h1>JSON-RPC API</h1></a>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
+<p><strong>Contents</strong></p>
 <ul>
 <li><a href="#json-rpc-api">JSON RPC API</a>
 <ul>
@@ -2793,7 +2793,7 @@ curl -X POST --data '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&qu
 }
 </code></pre>
 <a class="header" href="#introduction-2" id="introduction-2"><h1>Introduction</h1></a>
-<p>From version 1.4 geth has <strong><em>experimental</em></strong> support for pub/sub using subscriptions as defined in the JSON-RPC 2.0 specification. This allows clients to wait for events instead of polling for them.</p>
+<p>DEXON fullnode supports pub/sub using subscriptions as defined in the JSON-RPC 2.0 specification. This allows clients to wait for events instead of polling for them.</p>
 <p>It works by subscribing to particular events. The node will return a subscription id. For each event that matches the subscription a notification with relevant data is send together with the subscription id.</p>
 <p>Example:</p>
 <pre><code>// create subscription
