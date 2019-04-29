@@ -166,7 +166,8 @@ Sometimes nodes who violate the rule for notary set will be fined some coin. Thi
 <li>Failing to finish distributed key generation (DKG)</li>
 <li>Failing to propose any blocks during a whole epoch</li>
 </ol>
-<p>For 1. to 4., the entire stake will be confiscated immediately by DEXON Foundation. For 5., a fine of the <code>1 DXN</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.  For 6., a fine of the <code>Block Reward*86400/total Node</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.</p>
+<p>For 1. to 4., the entire stake will be confiscated immediately by DEXON Foundation. For 5., a fine of the <code>1 DXN</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.  For 6., a fine of the <code>100 DXN</code> will be imposed and no blocks can be produced until such fine is paid under the governance contract.</p>
+<!--- Block Reward*86400/total Node --->
 <p>Nodes can pay the fine in the governance contract, see <a href="https://dexon-foundation.github.io/wiki/Accessing-Governance-Contract.html#pay-fine">payFine</a>.</p>
 <a class="header" href="#recovery" id="recovery"><h2>Recovery</h2></a>
 <p>Currently, DEXON's <a href="Recovery-Mechanism.html">recovery</a> is built on top of the Ethereum mainnet. All nodes are required to deposit at least <strong>5 Ether</strong> to the same node address. Ether used for recovery will be returned after DEXON successfully recovered. However, if DEXON failed to recover and result in a hard fork, the stakes of nodes that did not deposit enough amount of Ether will be confiscated.</p>
